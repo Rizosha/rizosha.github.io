@@ -1,6 +1,6 @@
 ---
 title: New Post
-published: 2025-01-01
+published: 2024-01-01
 updated: 2026-01-01
 description: 'Read more about Markdown features in Fuwari'
 image: ''
