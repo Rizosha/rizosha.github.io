@@ -9,8 +9,9 @@ category: 'University'
 draft: false 
 ---
 
-## GitHub Repository Cards
-You can add dynamic cards that link to GitHub repositories, on page load, the repository information is pulled from the GitHub API. 
+## Introduction
+This project was a submission for my Advanced Games Programming module whilst at University. The premise for this 
+project was to create a dice rolling game that can be used while playing Dungeons and Dragons. 
 
 ::github{repo="Fabrizz/MMM-OnSpotify"}
 
@@ -87,9 +88,4 @@ This is a note with a custom title.
 
 You can add spoilers to your text. The text also supports **Markdown** syntax.
 
-The content :spoiler[is hidden **ayyy**]!
-
-```markdown
-The content :spoiler[is hidden **ayyy**]!
-
-```
+The content :spoiler[is hidden **ayyy**
