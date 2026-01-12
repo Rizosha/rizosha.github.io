@@ -11,81 +11,35 @@ draft: false
 
 ## Introduction
 This project was a submission for my Advanced Games Programming module whilst at University. The premise for this 
-project was to create a dice rolling game that can be used while playing Dungeons and Dragons. 
+project was to create a dice rolling game that can be used while playing Dungeons and Dragons. I wanted to create something 
+that I would get use out of weekly during my sessions and could develop more after the submission date.
 
-::github{repo="Fabrizz/MMM-OnSpotify"}
 
-Create a GitHub repository card with the code `::github{repo="<owner>/<repo>"}`.
+## Objectives
 
-```markdown
-::github{repo="saicaca/fuwari"}
-```
+One of the main things I wanted to achieve was to create a launcher that grabs all the dice together in one spot and throws them in a direction.
+I want some sort of explosive and chaotic launcher that will add a little extra emphasis to my rolls while playing that isn’t like the previous examples.
+Along with this I wanted some sort of system to save the dice loadouts and assign a name to them
+With this the player would be able to assign them the name of a spell or attack and pull out the dice straight away without the need to curate them again. 
 
-## Admonitions
-
-Following types of admonitions are supported: `note` `tip` `important` `warning` `caution`
-
-:::note
-Highlights information that users should take into account, even when skimming.
-:::
-
-:::tip
-Optional information to help a user be more successful.
-:::
-
-:::important
-Crucial information necessary for users to succeed.
-:::
-
-:::warning
-Critical content demanding immediate user attention due to potential risks.
-:::
-
-:::caution
-Negative potential consequences of an action.
-:::
+I also need some modifier tab to modify the output of the dice The user would be able to have the option to either add a modifier to
+each of the dice rolls or at the end of all the rolls without the need to calculate it at the table.
+Based on the other dice rolling examples, they had some sort of spawning system for the dice which was based on a button press
+My aim is to include a system which spawns the dice on the board on a button press.
+Finally,I would need some sort of tally system of all the dice which considered the modifiers This would also include a display which is
+half of all the current dice on the board
 
 ### Basic Syntax
 
-```markdown
-:::note
-Highlights information that users should take into account, even when skimming.
-:::
 
-:::tip
-Optional information to help a user be more successful.
-:::
-```
 
 ### Custom Titles
 
-The title of the admonition can be customized.
 
-:::note[MY CUSTOM TITLE]
-This is a note with a custom title.
-:::
-
-```markdown
-:::note[MY CUSTOM TITLE]
-This is a note with a custom title.
-:::
-```
 
 ### GitHub Syntax
 
-> [!TIP]
-> [The GitHub syntax](https://github.com/orgs/community/discussions/16925) is also supported.
 
-```
-> [!NOTE]
-> The GitHub syntax is also supported.
-
-> [!TIP]
-> The GitHub syntax is also supported.
-```
 
 ### Spoiler
 
-You can add spoilers to your text. The text also supports **Markdown** syntax.
-
-The content :spoiler[is hidden **ayyy**
