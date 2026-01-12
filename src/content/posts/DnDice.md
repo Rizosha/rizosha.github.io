@@ -4,7 +4,7 @@ published: 2024-01-01
 updated: 2026-01-01
 description: 'This is a project I created in University so that you can roll dice on your phone at DnD Campaigns with physics'
 image: ''
-tags: [DnDice, ]
+tags: [DnDice ]
 category: 'University'
 draft: false 
 ---
@@ -51,13 +51,5 @@ One of my friends heard about what I was doing and suggested this dice game that
 He wanted to roll the dice similarly to how I did and have them react to physics instead of relying on a number generator.
 When you click on the screen all the dice will bounce at once and roll around.
 
-### Custom Titles
 
-
-
-### GitHub Syntax
-
-
-
-### Spoiler
 
