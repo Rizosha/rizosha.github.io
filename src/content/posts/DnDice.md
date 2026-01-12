@@ -18,8 +18,8 @@ that I would get use out of weekly during my sessions and could develop more aft
 ## Objectives
 
 One of the main things I wanted to achieve was to create a launcher that grabs all the dice together in one spot and throws them in a direction.
-I want some sort of explosive and chaotic launcher that will add a little extra emphasis to my rolls while playing that isn’t like the previous examples.
-Along with this I wanted some sort of system to save the dice loadouts and assign a name to them
+I want some sort of explosive and chaotic launcher that will add a little extra emphasis to my rolls while playing that isn’t like the following examples below.
+Along with this I wanted some sort of system to save the dice loadouts and assign a name to them.
 With this the player would be able to assign them the name of a spell or attack and pull out the dice straight away without the need to curate them again. 
 
 I also need some modifier tab to modify the output of the dice The user would be able to have the option to either add a modifier to
@@ -29,9 +29,27 @@ My aim is to include a system which spawns the dice on the board on a button pre
 Finally,I would need some sort of tally system of all the dice which considered the modifiers This would also include a display which is
 half of all the current dice on the board
 
-### Basic Syntax
+### Research
+
+Google Browser Dice Game
+
+This is the most basic iteration of a dice roller. With this you can select which dice you wish to roll, spawn them in and roll them. 
+In the corner is a total of all the dice, along with an extra button that allows you to make modifications to your rolls (add an extra value to it)
 
 
+Dice - Play store 
+
+This is a game on the Play Store called Dice.
+
+This is the first example of a game that's already been made in Unity and will work similarly to how I want. The main mechanic from this game is when you have
+selected your dice, you will tap the screen to add a bounce to all the dice, which will also apply a rotating force in order to roll them.
+Along with this there are board customizations, more variety of dice such as a D1000 and other options to increase the gravity and such.
+
+Indie Dev Online - Dice with physics 
+
+One of my friends heard about what I was doing and suggested this dice game that a Reddit user posted.
+He wanted to roll the dice similarly to how I did and have them react to physics instead of relying on a number generator.
+When you click on the screen all the dice will bounce at once and roll around.
 
 ### Custom Titles
 
