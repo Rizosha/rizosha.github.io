@@ -30,7 +30,7 @@ My aim is to include a system which spawns the dice on the board on a button pre
 Finally,I would need some sort of tally system of all the dice which considered the modifiers This would also include a display which is
 half of all the current dice on the board
 
-### Research
+## Research
 
 Google Browser Dice Game
 
@@ -51,7 +51,7 @@ One of my friends heard about what I was doing and suggested this dice game that
 He wanted to roll the dice similarly to how I did and have them react to physics instead of relying on a number generator.
 When you click on the screen all the dice will bounce at once and roll around.
 
-### Planning
+## Planning
 
 Originally, my first plans to calculate the total of the dice consisted of using ground checks on each of the dice. 
 
