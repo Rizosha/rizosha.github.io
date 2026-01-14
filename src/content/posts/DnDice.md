@@ -29,7 +29,7 @@ My aim is to include a system which spawns the dice on the board on a button pre
 Finally,I would need some sort of tally system of all the dice which considered the modifiers This would also include a display which is
 half of all the current dice on the board
 
-<<<<<<< HEAD
+
 ## Research
 
 Google Browser Dice Game
@@ -50,8 +50,7 @@ Indie Dev Online - Dice with physics
 One of my friends heard about what I was doing and suggested this dice game that a Reddit user posted.
 He wanted to roll the dice similarly to how I did and have them react to physics instead of relying on a number generator.
 When you click on the screen all the dice will bounce at once and roll around.
-=======
-### Basic Syntax
+
 
 
 ## Planning
@@ -66,7 +65,7 @@ Using 5 D20 alone would equal to 100 ground checks in one instance. This would b
 During class, the tutor asked if any of us had any issues with our projects at the moment, and I asked if there was a better way to calculate this.
 
 
->>>>>>> parent of 53d6a12 (Update DnDice.md)
+
 
 
 
