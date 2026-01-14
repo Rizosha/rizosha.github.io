@@ -36,7 +36,6 @@ Google Browser Dice Game
 This is the most basic iteration of a dice roller. With this you can select which dice you wish to roll, spawn them in and roll them. 
 In the corner is a total of all the dice, along with an extra button that allows you to make modifications to your rolls (add an extra value to it)
 
-
 Dice - Play store 
 
 This is a game on the Play Store called Dice.
@@ -51,5 +50,15 @@ One of my friends heard about what I was doing and suggested this dice game that
 He wanted to roll the dice similarly to how I did and have them react to physics instead of relying on a number generator.
 When you click on the screen all the dice will bounce at once and roll around.
 
+### 
+
+Originally, my first plans to calculate the total of the dice consisted of using ground checks on each of the dice. 
+
+From this, I knew I would need to store all the dice in some array and use a loop to perform a ground check as soon as the velocity reached 0. 
+
+Planning this out early though highlighted one key issue, if I had a dice such as a D20, that would mean there would be 20 ground checks being calculated at the same time. 
+Using 5 D20 alone would equal to 100 ground checks in one instance. This would be a huge performance hit, and would need to find an alternative solution.
+
+During class, the tutor asked if any of us had any issues with our projects at the moment, and I asked if there was a better way to calculate this. 
 
 
