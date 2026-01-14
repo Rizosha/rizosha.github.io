@@ -50,7 +50,7 @@ One of my friends heard about what I was doing and suggested this dice game that
 He wanted to roll the dice similarly to how I did and have them react to physics instead of relying on a number generator.
 When you click on the screen all the dice will bounce at once and roll around.
 
-### 
+### Planning
 
 Originally, my first plans to calculate the total of the dice consisted of using ground checks on each of the dice. 
 
