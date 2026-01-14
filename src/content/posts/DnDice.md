@@ -18,8 +18,8 @@ that I would get use out of weekly during my sessions and could develop more aft
 ## Objectives
 
 One of the main things I wanted to achieve was to create a launcher that grabs all the dice together in one spot and throws them in a direction.
-I want some sort of explosive and chaotic launcher that will add a little extra emphasis to my rolls while playing that isn’t like the following examples below.
-Along with this I wanted some sort of system to save the dice loadouts and assign a name to them.
+I want some sort of explosive and chaotic launcher that will add a little extra emphasis to my rolls while playing that isn’t like the previous examples.
+Along with this I wanted some sort of system to save the dice loadouts and assign a name to them
 With this the player would be able to assign them the name of a spell or attack and pull out the dice straight away without the need to curate them again. 
 
 I also need some modifier tab to modify the output of the dice The user would be able to have the option to either add a modifier to
@@ -29,6 +29,7 @@ My aim is to include a system which spawns the dice on the board on a button pre
 Finally,I would need some sort of tally system of all the dice which considered the modifiers This would also include a display which is
 half of all the current dice on the board
 
+<<<<<<< HEAD
 ## Research
 
 Google Browser Dice Game
@@ -49,16 +50,23 @@ Indie Dev Online - Dice with physics
 One of my friends heard about what I was doing and suggested this dice game that a Reddit user posted.
 He wanted to roll the dice similarly to how I did and have them react to physics instead of relying on a number generator.
 When you click on the screen all the dice will bounce at once and roll around.
+=======
+### Basic Syntax
+
 
 ## Planning
 
-Originally, my first plans to calculate the total of the dice consisted of using ground checks on each of the dice. 
+Originally, my first plans to calculate the total of the dice consisted of using ground checks on each of the dice.
 
-From this, I knew I would need to store all the dice in some array and use a loop to perform a ground check as soon as the velocity reached 0. 
+From this, I knew I would need to store all the dice in some array and use a loop to perform a ground check as soon as the velocity reached 0.
 
-Planning this out early though highlighted one key issue, if I had a dice such as a D20, that would mean there would be 20 ground checks being calculated at the same time. 
+Planning this out early though highlighted one key issue, if I had a dice such as a D20, that would mean there would be 20 ground checks being calculated at the same time.
 Using 5 D20 alone would equal to 100 ground checks in one instance. This would be a huge performance hit, and would need to find an alternative solution.
 
-During class, the tutor asked if any of us had any issues with our projects at the moment, and I asked if there was a better way to calculate this. 
+During class, the tutor asked if any of us had any issues with our projects at the moment, and I asked if there was a better way to calculate this.
+
+
+>>>>>>> parent of 53d6a12 (Update DnDice.md)
+
 
 
