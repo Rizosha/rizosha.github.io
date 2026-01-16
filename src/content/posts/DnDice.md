@@ -59,17 +59,31 @@ Originally, my first plans to calculate the total of the dice consisted of using
 
 From this, I knew I would need to store all the dice in some array and use a loop to perform a ground check as soon as the velocity reached 0.
 
-Planning this out early though highlighted one key issue, if I had a dice such as a D20, that would mean there would be 20 ground checks being calculated at the same time.
-Using 5 D20 alone would equal to 100 ground checks in one instance. This would be a huge performance hit, and would need to find an alternative solution.
+Planning this out early though highlighted one key issue, if I had a die such as a D20, that would mean there would be 20 ground checks being calculated at the same time.
+Using 5 D20 alone would be equal to 100 ground checks in one instance. This would be a huge performance hit, and would need to find an alternative solution.
 
 During class, the tutor asked if any of us had any issues with our projects at the moment, and I asked if there was a better way to calculate this.
 
-After some discussion, we settled that it would be more efficient to create reference points for each side of a dice and store it inside an array.
+After some discussion, we settled that it would be more efficient to create reference points for each side of a die and store it inside an array.
 From here, we select the reference point that has the highest Y value, and that will be the side that which was rolled. 
 
-
+To execute this, I started by creating a script that would store the reference points for each of the sides of the dice. After storing them, 
+I created a separate array that took the data from the first array and stored the Y values of each reference point. From here I was able to sort through the array and find the highest Y value outputting the value of the dice.
 
 ## Shooting mechanic 
+
+I then tried to plan out my shooting mechanic. Using the diagram below, I mapped out that when a finger input is recieved, it would gather all the dice and
+move them to the point of your finger. When you slide your finger away from the original point, it will create a slingshot between the two points. 
+When you release your finger, it will then release all the dice and fire them in the direction that was created between the two points. 
+
+When creating this in Unity, I created a script that would house reference points for the dice along with its Rigid Body and created reference points for the touch input.
+I was then able to create a function that would move the dice to the point of the finger input and then create a slingshot between the two points. I also had 
+to create an offset for the dice to sit below the camera, as originally they would be taking the whole screen when gathered under your finger. 
+
+I also needed a way to "shuffle" the dice before they are fired. I was able to do this by using the Ping Pong function to mimic a left,right,up,down 
+force by pinging between two values which represented the dice current rotation. Although I realised this wasn't the most efficient way to do this, I was able to 
+create a function that would shuffle the dice by using a random number generator to determine the direction and force of the dice. A much simpler method would have just been to set the 
+rotation of the dice based on a random number. However, I figured this would be more interesting of a mechanic and would let me get use out of the PIng POng Function as I had never had a use for it before. 
 
 ## User Interface 
 
