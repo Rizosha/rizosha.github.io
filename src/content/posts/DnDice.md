@@ -53,7 +53,7 @@ When you click on the screen all the dice will bounce at once and roll around.
 
 
 
-## Planning
+## Dice Output
 
 Originally, my first plans to calculate the total of the dice consisted of using ground checks on each of the dice.
 
@@ -63,6 +63,19 @@ Planning this out early though highlighted one key issue, if I had a dice such a
 Using 5 D20 alone would equal to 100 ground checks in one instance. This would be a huge performance hit, and would need to find an alternative solution.
 
 During class, the tutor asked if any of us had any issues with our projects at the moment, and I asked if there was a better way to calculate this.
+
+After some discussion, we settled that it would be more efficient to create reference points for each side of a dice and store it inside an array.
+From here, we select the reference point that has the highest Y value, and that will be the side that which was rolled. 
+
+
+
+## Shooting mechanic 
+
+## User Interface 
+
+## Dice Spawning 
+
+## Custom Dice Save System 
 
 
 
