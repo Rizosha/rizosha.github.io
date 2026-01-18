@@ -9,13 +9,13 @@ category: 'University'
 draft: false 
 ---
 
-## Introduction
+### Introduction
 
 This project was created as a submission for my Advanced Games Programming module at university. The goal was to develop a dice-rolling game that could be used while playing Dungeons and Dragons.
 
 Rather than building something purely for assessment, I wanted to create a tool I would genuinely use during my weekly DnD sessions. I also aimed to design it in a way that allowed me to continue developing and expanding it after the module submission date.
 
-## Objectives
+### Objectives
 
 One of my main goals was to create a launcher system that gathers all selected dice into one place and fires them in a chosen direction. I wanted this launcher to feel explosive and chaotic, adding extra impact to dice rolls instead of behaving like more traditional dice rollers.
 
@@ -27,7 +27,7 @@ Most existing dice rollers rely on simple button-press spawning. Instead, my aim
 
 Finally, I needed a tally system that calculates the total of all dice, including modifiers. This also includes a secondary display that shows half of the current total, which is useful for large damage rolls.
 
-## Development
+### Development
 
 ## Dice Output
 
@@ -71,7 +71,7 @@ The system works by writing the dice array data to a JSON file along with a cust
 
 I designed the interface to support up to 20 saved dice sets, using scroll views to keep the layout clean and manageable.
 
-## Conclusion
+### Conclusion
 
 Overall, I am very happy with the outcome of this project. It was one of my first projects completed entirely without following video tutorials, relying instead on my own knowledge and problem-solving.
 
