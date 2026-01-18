@@ -9,89 +9,75 @@ category: 'University'
 draft: false 
 ---
 
-## Introduction
-This project was a submission for my Advanced Games Programming module whilst at University. The premise for this 
-project was to create a dice rolling game that can be used while playing Dungeons and Dragons. I wanted to create something 
-that I would get use out of weekly during my sessions and could develop more after the submission date.
+### Introduction
 
+This project was created as a submission for my Advanced Games Programming module at university. The goal was to develop a dice-rolling game that could be used while playing Dungeons and Dragons.
 
-## Objectives
+Rather than building something purely for assessment, I wanted to create a tool I would genuinely use during my weekly DnD sessions. I also aimed to design it in a way that allowed me to continue developing and expanding it after the module submission date.
 
-One of the main things I wanted to achieve was to create a launcher that grabs all the dice together in one spot and throws them in a direction.
-I want some sort of explosive and chaotic launcher that will add a little extra emphasis to my rolls while playing that isn’t like the previous examples.
-Along with this I wanted some sort of system to save the dice loadouts and assign a name to them
-With this the player would be able to assign them the name of a spell or attack and pull out the dice straight away without the need to curate them again. 
+### Objectives
 
-I also need some modifier tab to modify the output of the dice The user would be able to have the option to either add a modifier to
-each of the dice rolls or at the end of all the rolls without the need to calculate it at the table.
-Based on the other dice rolling examples, they had some sort of spawning system for the dice which was based on a button press
-My aim is to include a system which spawns the dice on the board on a button press.
-Finally,I would need some sort of tally system of all the dice which considered the modifiers This would also include a display which is
-half of all the current dice on the board
+One of my main goals was to create a launcher system that gathers all selected dice into one place and fires them in a chosen direction. I wanted this launcher to feel explosive and chaotic, adding extra impact to dice rolls instead of behaving like more traditional dice rollers.
 
+Another key objective was a dice loadout system. Players should be able to save specific dice combinations, assign them a custom name, and instantly reuse them. This allows dice sets to be named after spells or attacks, removing the need to repeatedly curate the same dice.
 
-## Research
+I also wanted a modifier system that could adjust dice results automatically. The user should be able to apply modifiers either per die or as a final total without needing to calculate anything at the table.
 
-Google Browser Dice Game
+Most existing dice rollers rely on simple button-press spawning. Instead, my aim was to create a system where dice spawn onto the board through a dedicated interaction and can then be physically launched.
 
-This is the most basic iteration of a dice roller. With this you can select which dice you wish to roll, spawn them in and roll them. 
-In the corner is a total of all the dice, along with an extra button that allows you to make modifications to your rolls (add an extra value to it)
+Finally, I needed a tally system that calculates the total of all dice, including modifiers. This also includes a secondary display that shows half of the current total, which is useful for large damage rolls.
 
-Dice - Play store 
-
-This is a game on the Play Store called Dice.
-
-This is the first example of a game that's already been made in Unity and will work similarly to how I want. The main mechanic from this game is when you have
-selected your dice, you will tap the screen to add a bounce to all the dice, which will also apply a rotating force in order to roll them.
-Along with this there are board customizations, more variety of dice such as a D1000 and other options to increase the gravity and such.
-
-Indie Dev Online - Dice with physics 
-
-One of my friends heard about what I was doing and suggested this dice game that a Reddit user posted.
-He wanted to roll the dice similarly to how I did and have them react to physics instead of relying on a number generator.
-When you click on the screen all the dice will bounce at once and roll around.
-
-
+### Development
 
 ## Dice Output
 
-Originally, my first plans to calculate the total of the dice consisted of using ground checks on each of the dice.
+My initial approach to calculating dice values involved using ground checks on each die. Once a die’s velocity reached zero, it would perform a ground check to determine which face was facing upward.
 
-From this, I knew I would need to store all the dice in some array and use a loop to perform a ground check as soon as the velocity reached 0.
+While planning this, I quickly identified a major problem. A D20 would require 20 ground checks at once, meaning just five D20s would trigger 100 checks simultaneously. This would cause unnecessary performance issues, so I needed a better solution.
 
-Planning this out early though highlighted one key issue, if I had a die such as a D20, that would mean there would be 20 ground checks being calculated at the same time.
-Using 5 D20 alone would be equal to 100 ground checks in one instance. This would be a huge performance hit, and would need to find an alternative solution.
+After discussing this with my tutor during class, we agreed that using reference points would be far more efficient. Each side of a die has a reference point, all of which are stored in an array. By checking which reference point has the highest Y value, I can determine which face is facing upward.
 
-During class, the tutor asked if any of us had any issues with our projects at the moment, and I asked if there was a better way to calculate this.
+To implement this, I created a script that stores the reference points for each side of the die. These points are added to an array, and their Y values are extracted into a second array. By sorting and comparing these values, I can identify the highest point and return the correct dice result efficiently.
 
-After some discussion, we settled that it would be more efficient to create reference points for each side of a die and store it inside an array.
-From here, we select the reference point that has the highest Y value, and that will be the side that which was rolled. 
+## Shooting Mechanic
 
-To execute this, I started by creating a script that would store the reference points for each of the sides of the dice. After storing them, 
-I created a separate array that took the data from the first array and stored the Y values of each reference point. From here I was able to sort through the array and find the highest Y value outputting the value of the dice.
+For the shooting mechanic, I began by planning the interaction visually. When the player touches the screen, all active dice gather at the touch point. Dragging the finger away creates a slingshot between the start and end points. When released, all dice are fired in that direction.
 
-## Shooting mechanic 
+In Unity, I implemented this by creating a script that stores references to each die, its Rigidbody, and the touch input positions. A function moves the dice to the touch point and calculates the launch direction based on the distance between the two points. I also added an offset so the dice sit slightly below the camera, as they initially took up too much screen space when grouped together.
 
-I then tried to plan out my shooting mechanic. Using the diagram below, I mapped out that when a finger input is recieved, it would gather all the dice and
-move them to the point of your finger. When you slide your finger away from the original point, it will create a slingshot between the two points. 
-When you release your finger, it will then release all the dice and fire them in the direction that was created between the two points. 
+Before firing the dice, I wanted a way to shuffle them so the rolls felt more natural. I first experimented with Unity’s PingPong function to simulate left, right, up, and down motion by oscillating between rotation values. Although this was not the most efficient solution, it worked well as a learning exercise.
 
-When creating this in Unity, I created a script that would house reference points for the dice along with its Rigid Body and created reference points for the touch input.
-I was then able to create a function that would move the dice to the point of the finger input and then create a slingshot between the two points. I also had 
-to create an offset for the dice to sit below the camera, as originally they would be taking the whole screen when gathered under your finger. 
+Later, I refined the system to use random values for both direction and force. A simpler option would have been to randomise rotation directly, but the physical shuffling added extra energy to the mechanic and gave the rolls more personality.
 
-I also needed a way to "shuffle" the dice before they are fired. I was able to do this by using the Ping Pong function to mimic a left,right,up,down 
-force by pinging between two values which represented the dice current rotation. Although I realised this wasn't the most efficient way to do this, I was able to 
-create a function that would shuffle the dice by using a random number generator to determine the direction and force of the dice. A much simpler method would have just been to set the 
-rotation of the dice based on a random number. However, I figured this would be more interesting of a mechanic and would let me get use out of the PIng POng Function as I had never had a use for it before. 
+## User Interface
 
-## User Interface 
+I created a results display that activates once all dice velocities reach zero. This shows the total value of the roll and includes a secondary calculator that automatically displays half of the total for convenience.
 
-## Dice Spawning 
+A modifier button was added to the dice case, allowing players to apply bonuses or penalties either to each die or as a final value. This makes it quick and easy to account for buffs, debuffs, or situational modifiers during gameplay.
 
-## Custom Dice Save System 
+## Dice Spawning
 
+To build the dice case, I used simple cube meshes with a wooden texture sourced online. Inside the case, dice are spawned using a global UI canvas that contains buttons for each dice type.
 
+Dice spawning is handled using object pooling to improve performance and support large numbers of dice. Whenever a die is spawned, it is added to a list that is later used by the launcher system.
+
+I also added simple animations for opening and closing the dice case. This includes moving the case partially into view and then sliding it off-screen at a slight angle to keep the interface visually dynamic.
+
+## Custom Dice Save System
+
+I implemented a system that allows players to save custom dice sets for later use. This removes the need to repeatedly spawn the same combinations of dice.
+
+The system works by writing the dice array data to a JSON file along with a custom name. When saving a set, a new UI button is created using this name. Pressing the button instantly reloads the saved dice configuration.
+
+I designed the interface to support up to 20 saved dice sets, using scroll views to keep the layout clean and manageable.
+
+### Conclusion
+
+Overall, I am very happy with the outcome of this project. It was one of my first projects completed entirely without following video tutorials, relying instead on my own knowledge and problem-solving.
+
+The project significantly improved my understanding of arrays, data storage, and file writing. Planning mechanics using pseudocode also proved invaluable, especially for more complex systems like the shooting mechanic, as it allowed me to clearly define each step before implementation.
+
+I would love to continue developing this project in the future. After researching existing dice simulators, I found that there are surprisingly few high-quality options available. Future improvements could include a visible launcher indicator to clearly show firing direction, as well as achievements, cosmetics, and further visual polish.
 
 
 
