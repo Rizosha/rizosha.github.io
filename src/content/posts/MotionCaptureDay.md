@@ -1,10 +1,10 @@
 ---
-title: IX
-published: 2023-4-20
-updated: 2023-4-20
+title: Motion Capture Day
+published: 2022-11-19
+updated: 2022-11-19
 description: 'This Project was created for the Brackeys 2025.2 Game Jam with a theme of risk it for a biscuit.'
 image: ''
-tags: []
+tags: [DnDice]
 category: 'University'
 draft: false 
 ---
