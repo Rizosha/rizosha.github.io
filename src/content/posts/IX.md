@@ -25,6 +25,8 @@ This project was created in Unity and was my final year group project while at u
 by going through all the stages of game production which included a Pitch and Prototype at the start of the year which 
 would then be further developed throughout the year.
 
+![Face Off IX](./IX/FaceOffIX.png)
+
 # Objectives
 
 # Development
