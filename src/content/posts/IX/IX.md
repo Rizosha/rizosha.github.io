@@ -59,6 +59,24 @@ current direction they were facing.
 
 The player has several attacks at their disposal, ranging from a basic attack combo to a lethal jumping attack
 
+<div style="display: flex; gap: 10px; align-items: center; justify-content: center;">
+  <video 
+    src="/videos/Attack1.mp4" 
+    autoplay muted loop playsinline 
+    style="width: 32%; border-radius: 12px;">
+  </video>
+  <video 
+    src="/videos/Attack2.mp4" 
+    autoplay muted loop playsinline 
+    style="width: 32%; border-radius: 12px;">
+  </video>
+  <video 
+    src="/videos/Attack3.mp4" 
+    autoplay muted loop playsinline 
+    style="width: 32%; border-radius: 12px;">
+  </video>
+</div>
+
 In order to create the combo attacks, I made use of the events tab in the animation window to create a small window that
 listens to see if the player has pressed either the normal or heavy attack button. This would then blend the basic attack
 into the next animation by using the inbuilt animation blend feature.
