@@ -51,7 +51,7 @@ current direction they were facing.
     style="width: 50%; border-radius: 12px;">
   </video>
   <img 
-    src="./IX/Screenshot 2023-10-27 171737.png" 
+    src="./IX/Screenshot_023-10-27_171737.png" 
     alt="Face Off IX" 
     style="width: 50%; border-radius: 12px;" 
   />
