@@ -41,9 +41,9 @@ float value, I was able to determine whether the player was walking or running a
 this. I was also able to implement turning animations for when the players input exceeded over 180 degrees from the 
 current direction they were facing.
 
-   <div style="display: flex; gap: 10px; align-items: center;">
+  <div style="display: flex; gap: 10px; align-items: center;">
       <video 
-        src="./walk_run.mp4" 
+        src="/videos/walk_run.mp4" 
         autoplay 
         muted 
         loop 
@@ -51,7 +51,7 @@ current direction they were facing.
         style="width: 50%; border-radius: 12px;">
       </video>
       <img 
-        src="./ix-controller.png" 
+        src="/videos/ix-controller.png" 
         alt="Character Controller Screenshot" 
         style="width: 50%; border-radius: 12px;" 
       />
