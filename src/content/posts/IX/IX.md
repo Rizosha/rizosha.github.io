@@ -12,7 +12,7 @@ draft: false
 <iframe
 width="720"
 height="405"
-src="https://youtu.be/ym3PQGVJHcY?autoplay=1"
+src="https://www.youtube.com/embed/ym3PQGVJHcY?autoplay=1"
 title="YouTube video player"
 frameborder="0"
 allow="autoplay; encrypted-media"
@@ -43,7 +43,7 @@ current direction they were facing.
 
 <div style="display: flex; gap: 10px; align-items: center;">
   <video 
-    src="./IX/walk_Run.mp4" 
+    src="walk_Run.mp4" 
     autoplay 
     muted 
     loop 
@@ -51,7 +51,7 @@ current direction they were facing.
     style="width: 50%; border-radius: 12px;">
   </video>
   <img 
-    src="./IX/Screenshot_023-10-27_171737.png" 
+    src="Screenshot_023-10-27_171737.png" 
     alt="Face Off IX" 
     style="width: 50%; border-radius: 12px;" 
   />
