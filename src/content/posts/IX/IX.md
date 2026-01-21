@@ -41,6 +41,22 @@ float value, I was able to determine whether the player was walking or running a
 this. I was also able to implement turning animations for when the players input exceeded over 180 degrees from the 
 current direction they were facing.
 
+<div style="display: flex; gap: 10px; align-items: center;">
+  <video 
+    src="./IX/walk_Run.mp4" 
+    autoplay 
+    muted 
+    loop 
+    playsinline 
+    style="width: 50%; border-radius: 12px;">
+  </video>
+  <img 
+    src="./IX/Screenshot 2023-10-27 171737.png" 
+    alt="Face Off IX" 
+    style="width: 50%; border-radius: 12px;" 
+  />
+</div>
+
 The player has several attacks at their disposal, ranging from a basic attack combo to a lethal jumping attack
 
 In order to create the combo attacks, I made use of the events tab in the animation window to create a small window that
