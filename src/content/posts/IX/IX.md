@@ -40,7 +40,7 @@ would then be further developed throughout the year.
 
 # Development
 
-# Character Controller
+## Character Controller
 
 One of the main features I worked on was the Players character controller. Using Unity’s animator, I was able to create 
 a fluid system that used root motion animations to move the character and perform a variety of attacks. 
@@ -105,7 +105,7 @@ avoid damage. These custom events would trigger code near the start and end of t
 frames. This would also multiply the players forward transform by a custom roll distance variable to enable the player
 to have a speed boost during rolling to cover more distance, making the dodge more useful.
 
-# Tutorial and Dialogue systems
+## Tutorial and Dialogue systems
 
 To teach the player how to play our game, I implemented a tutorial at the start for the player to complete. Throughout
 this tutorial, the player would learn all the basics of player movement and combat, along with delivering the main story
@@ -141,7 +141,7 @@ When the tutorial has been completed, the gate to the next stage of the arena wi
 prevent the player from replaying this tutorial when entering this area again, a JSON file will be created when the 
 player passes through the gate which stores a variable stating that the player has completed the tutorial.
 
-# Custom Shaders
+## Custom Shaders
 
 I created a fire shader that was used throughout the scenes in sconces and fire pits. I was able to do this by taking an
 image of a flame and applying noise to it with the Voronoi node in the shader graph. After creating some custom variables 
@@ -159,7 +159,7 @@ add in a colour node to get it to resemble a health potion. After this, I attach
 interact with the nodes on the shader and the material. The script is able to take the X and Y rotation of the of the 
 last location of the fluids fill amount along with adding a clamp to the velocity.
 
-# Testing
+## Testing
 
 Throughout the year, we further Developed the game by doing rigorous Testing sessions. These sessions would consist of
 either displaying the game for our class, or to the whole university by having it displayed in the front entrance of the
