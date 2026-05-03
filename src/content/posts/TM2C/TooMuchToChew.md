@@ -27,7 +27,9 @@ endless scrolling shooter, where a scientist was trying to end world hunger by c
 went wrong, and now his superfoods threaten the world. As this was one of my first projects, it serves as a reminder to
 how far I have come in my development journey.
 
-# What I worked on
+<br/>
+
+# Contribution List
 
 Movement,  
 Shooting mechanic,  
@@ -38,6 +40,8 @@ Score System,
 Scientist Sprite,  
 Rocks Sprite,  
 Enemy Animations.  
+
+<br/>
 
 # Development
 

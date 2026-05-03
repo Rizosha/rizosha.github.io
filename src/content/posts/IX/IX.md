@@ -36,7 +36,12 @@ would then be further developed throughout the year.
 
 ![Face Off IX](FaceOffIX.png)
 
-# Objectives
+<br/>
+
+# Contribution List
+
+
+<br/>
 
 # Development
 
@@ -86,9 +91,18 @@ The player has several attacks at their disposal, ranging from a basic attack co
   </video>
 </div>
 
+Using animation layers within the animator allowed me to switch between different animation states such as attacking, being damaged and dodging.
+
+<img src="./Layers.png">
+
 In order to create the combo attacks, I made use of the events tab in the animation window to create a small window that
 listens to see if the player has pressed either the normal or heavy attack button. This would then blend the basic attack
 into the next animation by using the inbuilt animation blend feature.
+
+<div style="display: flex; gap: 10px; align-items: center; justify-content: center;">
+  <img src="./Events.avif" style="width: 48%; border-radius: 12px;" />
+  <img src="./ExitTime.avif" style="width: 48%; border-radius: 12px;" />
+</div>
 
 Certain conditions were established to assess the player's ability to execute the attack. This involved verifying whether
 the player possessed sufficient stamina to initiate the attack or if the player had undergone an attack, transitioning 
@@ -100,10 +114,28 @@ implemented a lerp to gradually blend into the blocking layer, to which I was ab
 only blocking when they have fully completed the blocking animation. This would also react to when the player was hit by
 an attack to trigger a stagger effect, giving the player visual feedback that they had successfully blocked an attack. 
 
+<video src="/videos/Blocking(1).mp4" autoplay muted loop playsinline style="width: 100%;"></video>
+
 When it came to the players dodge roll, I created custom animation events when the animation played for the player to 
 avoid damage. These custom events would trigger code near the start and end of the animation to provide invulnerability
 frames. This would also multiply the players forward transform by a custom roll distance variable to enable the player
 to have a speed boost during rolling to cover more distance, making the dodge more useful.
+
+  <div style="display: flex; gap: 10px; align-items: center;">
+      <img 
+        src="/videos/Iframe.png" 
+        alt="Iframe Screenshot" 
+        style="width: 49%; border-radius: 12px;" 
+      />
+        <video 
+        src="/videos/Dodge(1).mp4" 
+        autoplay 
+        muted 
+        loop 
+        playsinline 
+        style="width: 49%; border-radius: 12px;">
+      </video>
+    </div>
 
 ## Tutorial and Dialogue systems
 
@@ -174,7 +206,7 @@ some time with the motion capture department with our University.
 This was an amazing opportunity to learn about motion capture and was a worthwhile experience to learn about the process
 of recording animations and fully implementing them into the game.
 
-Even though we weren't able to use all of the recorded animations from that day, the ones we did use proved to be useful
+Even though we weren't able to use all the recorded animations from that day, the ones we did use proved to be useful
 and turned out amazing.
 
 # Marketing
