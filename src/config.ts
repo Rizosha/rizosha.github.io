@@ -45,12 +45,29 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.Archive,
 		LinkPreset.About,
 		{
+			name: "Featured",
+			url: "/featured/",
+		},
+		{
 			name: "GitHub",
-			url: "https://github.com/saicaca/fuwari", // Internal links should not include the base path, as it is automatically added
-			external: true, // Show an external link icon and will open in a new tab
+			url: "https://github.com/saicaca/fuwari",
+			external: true,
 		},
 	],
 };
+
+//export const navBarConfig: NavBarConfig = {
+//	links: [
+//		LinkPreset.Home,
+//		LinkPreset.Archive,
+//		LinkPreset.About,
+//		{
+//			name: "GitHub",
+//			url: "https://github.com/saicaca/fuwari", // Internal links should not include the base path, as it is automatically added
+//			external: true, // Show an external link icon and will open in a new tab
+//		},
+//	],
+//};
 
 export const profileConfig: ProfileConfig = {
 	avatar: "assets/images/IMG-20250305-WA0008[1].jpeg", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
