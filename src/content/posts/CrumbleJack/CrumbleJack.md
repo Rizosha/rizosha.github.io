@@ -30,7 +30,7 @@ Each round begins when the player presses the Deal button. This triggers the mai
 
 Before anything happens, the game checks whether it should even continue. If the player has already reached the win condition or run out of rounds, the game ends immediately. This prevents unnecessary processing and ensures the game flow stays clean.
 
-If the game is still active, the system then checks whether the player has enough chips to place their current bet. If they do, the bet is deducted and the round officially begins. At the same time, the UI for changing bets is disabled so the player is locked into their decision.
+If the game is still active, the system then checks whet/her the player has enough chips to place their current bet. If they do, the bet is deducted and the round officially begins. At the same time, the UI for changing bets is disabled so the player is locked into their decision.
 
 From here, the game transitions into the setup phase.
 
