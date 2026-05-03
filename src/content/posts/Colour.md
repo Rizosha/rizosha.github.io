@@ -9,12 +9,12 @@ category: 'University'
 draft: false 
 ---
 
- <div style="display: flex; gap: 10px; align-items: center;">
-  <video 
-    src="https://www.youtube.com/embed/FCSftJfBlZA" 
-    autoplay 
-    muted 
-    loop 
-    playsinline>
-  </video>
-</div>
+<iframe
+width="720"
+height="405"
+src="https://www.youtube.com/embed/FCSftJfBlZA"
+title="YouTube video player"
+frameborder="0"
+allow="encrypted-media"
+allowfullscreen>
+</iframe>
