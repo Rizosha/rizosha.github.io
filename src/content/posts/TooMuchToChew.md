@@ -9,7 +9,7 @@ category: 'University'
 draft: false 
 ---
 
-<iframe frameborder="0" src="https://itch.io/embed-upload/17394865?color=080547" allowfullscreen="" width="960" height="660"><a href="https://rizosha.itch.io/too-much-to-chew">Play Too Much To Chew on itch.io</a></iframe>
+<iframe frameborder="0" src="https://itch.io/embed-upload/17394865?color=080547" width="960" height="660"><a href="https://rizosha.itch.io/too-much-to-chew">Play Too Much To Chew on itch.io</a></iframe>
 
 
 # Introduction
