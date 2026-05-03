@@ -34,7 +34,7 @@ This project was created in Unity and was my final year group project while at u
 by going through all the stages of game production which included a Pitch and Prototype at the start of the year which 
 would then be further developed throughout the year.
 
-![Face Off IX](FaceOffIX.png)
+![Face Off IX](./FaceOffIX.png)
 
 <br/>
 
@@ -93,15 +93,15 @@ The player has several attacks at their disposal, ranging from a basic attack co
 
 Using animation layers within the animator allowed me to switch between different animation states such as attacking, being damaged and dodging.
 
-<img src="./Layers.png" alt="Animation layers in Unity Animator" />
+<img src="/public/Images/IX/Layers.png" alt="Animation layers in Unity Animator" />
 
 In order to create the combo attacks, I made use of the events tab in the animation window to create a small window that
 listens to see if the player has pressed either the normal or heavy attack button. This would then blend the basic attack
 into the next animation by using the inbuilt animation blend feature.
 
 <div style="display: flex; gap: 10px; align-items: center; justify-content: center;">
-<img src="./Events.avif" style="width: 48%; border-radius: 12px;" alt="Animation events tab" />
-<img src="./ExitTime.avif" style="width: 48%; border-radius: 12px;" alt="Exit time settings" />
+<img src="/public/Images/IX/Events.avif" style="width: 48%; border-radius: 12px;" alt="Animation events tab" />
+<img src="/public/Images/IX/ExitTime.avif" style="width: 48%; border-radius: 12px;" alt="Exit time settings" />
 </div>
 
 Certain conditions were established to assess the player's ability to execute the attack. This involved verifying whether
@@ -123,7 +123,7 @@ to have a speed boost during rolling to cover more distance, making the dodge mo
 
   <div style="display: flex; gap: 10px; align-items: center;">
       <img 
-        src="./Iframe.png" 
+        src="/public/Images/IX/Iframe.png" 
         alt="Iframe Screenshot" 
         style="width: 49%; border-radius: 12px;" 
       />
