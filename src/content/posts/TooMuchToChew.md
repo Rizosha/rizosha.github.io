@@ -61,8 +61,8 @@ I then used the InvokeRepeating command to spawn in these enemies at alternating
 
 ```c# title="Spawn Example 2"
 InvokeRepeating("SpawnDonut", 0, Random.Range(2f,6f ));
-```~~~~
-
+```
+~~~~
 I then created levels to the game by creating a switch with case statements. This switch would start at phase one when
 the game starts and change when the player receives a certain amount of points, advancing them through the levels and
 adding in more enemies and obstacles.
