@@ -2,7 +2,7 @@
 title: Too Much To Chew
 published: 2021-04-20
 updated: 2021-04-20
-description: 'This Project was created for the Brackeys 2025.2 Game Jam with a theme of risk it for a biscuit.'
+description: 'This Sidescrolling Endless Shooter was my first group project while at University.'
 image: ''
 tags: [TooMuchToChew]
 category: 'University'
@@ -11,6 +11,8 @@ draft: false
 <div style="width: 960px; height: 640px; overflow: hidden;">
   <iframe frameborder="0" src="https://itch.io/embed-upload/17394865?color=080547" width="960" height="660"></iframe>
 </div>
+
+---
 
 # Introduction
 
@@ -21,15 +23,15 @@ how far I have come in my development journey.
 
 # What I worked on
 
-Movement,
-Shooting mechanic,
-Enemy Spawner,
-Health Spawner,
-Background Image scrolling,
-Score System,
-Scientist Sprite,
-Rocks Sprite,
-Enemy Animations.
+Movement,  
+Shooting mechanic,  
+Enemy Spawner,  
+Health Spawner,  
+Background Image scrolling,  
+Score System,  
+Scientist Sprite,  
+Rocks Sprite,  
+Enemy Animations.  
 
 # Development
 
@@ -53,13 +55,13 @@ into a box collider to destroy them. I then saved the enemies as prefabs and cre
 to spawn them from. I then stored the transforms of the game objects in an array and created an index which generated a 
 random number from 0 to the length of the Spawn Points array to alternate where the enemies spawned from. 
 
-```c# title="Spawn Example 1"
+```csharp title="Spawn Example 1"
 spawnIndex = Random.Range(0, spawnPoints.Length);
 Instantiate(donut, spawnPoints[spawnIndex].position, Quaternion.identity);
 ```
 I then used the InvokeRepeating command to spawn in these enemies at alternating times by using Random.Range.
 
-```c# title="Spawn Example 2"
+```csharp title="Spawn Example 2"
 InvokeRepeating("SpawnDonut", 0, Random.Range(2f,6f ));
 ```
 
@@ -67,7 +69,7 @@ I then created levels to the game by creating a switch with case statements. Thi
 the game starts and change when the player receives a certain amount of points, advancing them through the levels and
 adding in more enemies and obstacles.
 
-```c# title="Spawn Example 3"
+```csharp title="Spawn Example 3"
 private void Update()
 {
  if (score == null) return;
@@ -85,7 +87,9 @@ private void Update()
  break;
  }
 }
+```
 
+```csharp title="Spawn Example 4"
 void TransitionTo(Phase newPhase)
 {
  currentPhase = newPhase;
@@ -114,8 +118,8 @@ void TransitionTo(Phase newPhase)
  InvokeRepeating("SpawnWall", 0f, Random.Range(4f, 9f));
  break;
  }
-}
-```
+``` 
+
 
 ## Image Scrolling
 

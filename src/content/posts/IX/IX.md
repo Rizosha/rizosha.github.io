@@ -2,8 +2,8 @@
 title: IX
 published: 2023-04-20
 updated: 2023-04-20
-description: 'This Project was My final year group submission project.'
-image: ''
+description: 'IX is a coliseum action battler and was my final year group submission project at University.'
+image: './FaceOffIX.png'
 tags: []
 category: 'University'
 draft: false 
@@ -18,6 +18,8 @@ frameborder="0"
 allow="autoplay; encrypted-media"
 allowfullscreen>
 </iframe>
+
+<iframe frameborder="0" src="https://itch.io/embed/2039447" width="552" height="167"><a href="https://lockwoodangels.itch.io/ix">IX by LockwoodAngels, Rizosha</a></iframe>
 
 # Introduction
 
