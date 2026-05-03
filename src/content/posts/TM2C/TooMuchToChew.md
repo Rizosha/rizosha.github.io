@@ -3,7 +3,7 @@ title: Too Much To Chew
 published: 2021-04-20
 updated: 2021-04-20
 description: 'This Sidescrolling Endless Shooter was my first group project while at University.'
-image: ''
+image: './TMTCTitlescreen.png'
 tags: [TooMuchToChew]
 category: 'University'
 draft: false 
