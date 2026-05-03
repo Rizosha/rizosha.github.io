@@ -25,6 +25,8 @@ allowfullscreen>
 
 <br/>
 
+---
+
 # Introduction
 
 This project was created in Unity and was my final year group project while at university. The aim was to create a game 
