@@ -53,16 +53,69 @@ into a box collider to destroy them. I then saved the enemies as prefabs and cre
 to spawn them from. I then stored the transforms of the game objects in an array and created an index which generated a 
 random number from 0 to the length of the Spawn Points array to alternate where the enemies spawned from. 
 
-----------code
-
+```c# title="Spawn Example 1"
+spawnIndex = Random.Range(0, spawnPoints.Length);
+Instantiate(donut, spawnPoints[spawnIndex].position, Quaternion.identity);
+```
 I then used the InvokeRepeating command to spawn in these enemies at alternating times by using Random.Range.
 
-
+```c# title="Spawn Example 2"
+InvokeRepeating("SpawnDonut", 0, Random.Range(2f,6f ));
+```~~~~
 
 I then created levels to the game by creating a switch with case statements. This switch would start at phase one when
 the game starts and change when the player receives a certain amount of points, advancing them through the levels and
 adding in more enemies and obstacles.
 
+```c# title="Spawn Example 3"
+private void Update()
+{
+ if (score == null) return;
+ 
+ switch (currentPhase)
+ {
+ case Phase.PhaseOne:
+ if (score.pScore >= phaseTwoThreshold)
+ TransitionTo(Phase.PhaseTwo);
+ break;
+
+ case Phase.PhaseTwo:
+ if (score.pScore >= phaseThreeThreshold)
+ TransitionTo(Phase.PhaseThree);
+ break;
+ }
+}
+
+void TransitionTo(Phase newPhase)
+{
+ currentPhase = newPhase;
+ CancelInvoke("SpawnBurger");
+ CancelInvoke("SpawnBoulder");
+ CancelInvoke("SpawnDonut");
+ CancelInvoke("SpawnWall");
+
+ switch (currentPhase)
+ {
+ case Phase.PhaseOne:
+ InvokeRepeating("SpawnDonut", 0, Random.Range(2f,6f ));
+ InvokeRepeating("SpawnBoulder", 4f, Random.Range(4f, 9f));
+ break;
+
+ case Phase.PhaseTwo:
+ InvokeRepeating("SpawnDonut", 1f, Random.Range(1f,5f ));
+ InvokeRepeating("SpawnBurger", 0f, Random.Range(1f, 7f));
+ InvokeRepeating("SpawnBoulder", Random.Range(4f,9f), Random.Range(4f, 9f));
+ break;
+
+ case Phase.PhaseThree:
+ InvokeRepeating("SpawnDonut", 2, Random.Range(1f,4f ));
+ InvokeRepeating("SpawnBurger", 2f, Random.Range(1f, 5f));
+ InvokeRepeating("SpawnBoulder", Random.Range(4f,9f), Random.Range(4f, 9f));
+ InvokeRepeating("SpawnWall", 0f, Random.Range(4f, 9f));
+ break;
+ }
+}
+```
 
 ## Image Scrolling
 
