@@ -36,7 +36,7 @@ export function getCategoryUrl(category: string | null): string {
 	if (!category || category.trim() === "" ||
 		category.trim().toLowerCase() === i18n(I18nKey.uncategorized).toLowerCase())
 		return url("/archive/?uncategorized=true");
-	return url(`/category/${encodeURIComponent(category.trim().toLowerCase())}/`);
+	return url(`/category/${encodeURIComponent(category.trim().toLowerCase().replace(/\s+/g, '-'))}/`);
 }
 
 export function getDir(path: string): string {
