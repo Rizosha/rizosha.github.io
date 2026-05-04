@@ -21,14 +21,22 @@ export function getTagUrl(tag: string): string {
 	return url(`/archive/?tag=${encodeURIComponent(tag.trim())}`);
 }
 
+
+//export function getCategoryUrl(category: string | null): string {
+//	if (
+//		!category ||
+//		category.trim() === "" ||
+//		category.trim().toLowerCase() === i18n(I18nKey.uncategorized).toLowerCase()
+//	)
+//		return url("/archive/?uncategorized=true");
+//	return url(`/archive/?category=${encodeURIComponent(category.trim())}`);
+//}
+
 export function getCategoryUrl(category: string | null): string {
-	if (
-		!category ||
-		category.trim() === "" ||
-		category.trim().toLowerCase() === i18n(I18nKey.uncategorized).toLowerCase()
-	)
+	if (!category || category.trim() === "" ||
+		category.trim().toLowerCase() === i18n(I18nKey.uncategorized).toLowerCase())
 		return url("/archive/?uncategorized=true");
-	return url(`/archive/?category=${encodeURIComponent(category.trim())}`);
+	return url(`/category/${encodeURIComponent(category.trim().toLowerCase())}/`);
 }
 
 export function getDir(path: string): string {
