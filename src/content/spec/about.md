@@ -1,6 +1,5 @@
 # About Me
 
-![Graduation](/Images/WhatsApp Image 2023-07-21 at 16.20.10_061da52c.jpg)
 
 As a dedicated Game Developer, I have graduated from the University of Salford with a 1st class in Games design
 and production. I specialize in programming and have had plenty experience working within Unity and Unreal Engine 5 for 
@@ -16,3 +15,11 @@ development.
 > - [LinkedIn](https://www.linkedin.com/in/ash-t-james)
 > - [Github](https://github.com/Rizosha) 
 > - [Itch.io](https://rizosha.itch.io) 
+
+<br/>
+
+<div style="display: flex; gap: 10px; align-items: center; justify-content: center;">
+  <img src="/Images/About/computer.png" alt="Computer" style="width: 32%; border-radius: 12px;" />
+  <img src="/Images/About/gradphoto.jpg" alt="Grad Photo" style="width: 32%; border-radius: 12px;" />
+  <img src="/Images/Mocap/20221118_132603.png" alt="Mocap" style="width: 32%; border-radius: 12px;" />
+</div>
