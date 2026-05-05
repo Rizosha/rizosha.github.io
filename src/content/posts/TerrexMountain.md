@@ -3,11 +3,14 @@ title: Terrex Mountain
 published: 2023-06-30
 updated: 2023-06-30
 description: 'This Project was created for the Brackeys 2025.2 Game Jam with a theme of risk it for a biscuit.'
-image: ''
+image: '/Images/Terrex/TerrexLogo'
 tags: []
 category: 'Freelance'
 draft: false 
 ---
+
+<video src="/videos/Terrex Mountain.mp4" autoplay muted loop playsinline style="width: 100%;"></video>
+
 
 # Introduction
 
