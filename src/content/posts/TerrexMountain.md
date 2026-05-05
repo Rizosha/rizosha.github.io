@@ -24,7 +24,7 @@ In order to give due emphasis to the products being promoted, I have strategical
 rock formation. This arrangement is intended to mirror the way these products would be displayed in a retail environment,
 creating a sense of familiarity for potential customers.
 
-<img src="/Images/Terrex/boots.png" alt="Computer" style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px;" />
+<img src="/Images/Terrex/boots.png" alt="Computer" style="width: 100%; height: 420px; object-fit: cover; border-radius: 12px;" />
 
 Additionally, I have ensured that these products are not just static displays. You have the ability to interact with them
 in a manner that closely simulates a real-life shopping experience. You can pick up the product, rotate it, and examine 
@@ -55,13 +55,13 @@ I also developed a multi-layered terrain material using landscape materials from
 enabled me to enhance the landscape's detail by painting various surfaces with multiple materials simultaneously.
 
 <div style="display: flex; gap: 10px;">
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; flex: 1;">
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 60%;">
     <img src="/Images/Terrex/grid1.png" alt="Image 1" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px;" />
     <img src="/Images/Terrex/grid2.png" alt="Image 2" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px;" />
     <img src="/Images/Terrex/grid3.png" alt="Image 3" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px;" />
     <img src="/Images/Terrex/grid4.png" alt="Image 4" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px;" />
   </div>
-  <img src="/Images/Terrex/properties.png" alt="Image 5" style="flex: 1; object-fit: cover; border-radius: 12px;" />
+  <img src="/Images/Terrex/properties.png" alt="Image 5" style="width: 40%; object-fit: cover; border-radius: 12px;" />
 </div>
 
 To ensure that the viewers remain engrossed in the product's experience, I've strategically restricted the size of the 
