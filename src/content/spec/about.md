@@ -1,5 +1,7 @@
 # About Me
 
+![Graduation](/Images/WhatsApp Image 2023-07-21 at 16.20.10_061da52c.jpg)
+
 As a dedicated Game Developer, I have graduated from the University of Salford with a 1st class in Games design
 and production. I specialize in programming and have had plenty experience working within Unity and Unreal Engine 5 for 
 the past 3 years, creating an array of projects, both solo and in collaborative teams, each providing the opportunity to
