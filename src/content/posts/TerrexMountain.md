@@ -61,7 +61,7 @@ enabled me to enhance the landscape's detail by painting various surfaces with m
     <img src="/Images/Terrex/grid3.png" alt="Image 3" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px;" />
     <img src="/Images/Terrex/grid4.png" alt="Image 4" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px;" />
   </div>
-<img src="/Images/Terrex/properties.png" alt="Image 5" style="width: 40%; min-height: 420px; object-fit: contain; border-radius: 12px;" />
+<img src="/Images/Terrex/properties.png" alt="Image 5" style="width: 40%; min-height: 620px; object-fit: contain; border-radius: 12px;" />
 </div>
 
 To ensure that the viewers remain engrossed in the product's experience, I've strategically restricted the size of the 
