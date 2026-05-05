@@ -17,7 +17,6 @@ draft: false
 I developed a VR demo for this project using Unreal Engine. This was initially created during my freelance work for a client. 
 The goal was to place the viewer on the edge of a mountaintop, showcasing the product in its intended environment.
 
-
 # Development
 
 # Product Placement
@@ -25,7 +24,7 @@ In order to give due emphasis to the products being promoted, I have strategical
 rock formation. This arrangement is intended to mirror the way these products would be displayed in a retail environment,
 creating a sense of familiarity for potential customers.
 
- <img src="/Images/Terrex/boots.png" alt="Computer" style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px;" />
+<img src="/Images/Terrex/boots.png" alt="Computer" style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px;" />
 
 Additionally, I have ensured that these products are not just static displays. You have the ability to interact with them
 in a manner that closely simulates a real-life shopping experience. You can pick up the product, rotate it, and examine 
