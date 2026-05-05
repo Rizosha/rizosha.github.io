@@ -19,7 +19,7 @@ development.
 <br/>
 
 <div style="display: flex; gap: 10px; align-items: center; justify-content: center;">
-  <img src="/Images/About/computer.png" alt="Computer" style="width: 32%; border-radius: 12px;" />
-  <img src="/Images/About/gradphoto.jpg" alt="Grad Photo" style="width: 32%; border-radius: 12px;" />
-  <img src="/Images/Mocap/20221118_132603.png" alt="Mocap" style="width: 32%; border-radius: 12px;" />
+  <img src="/Images/About/computer.png" alt="Computer" style="width: 32%; height: 250px; object-fit: cover; border-radius: 12px;" />
+  <img src="/Images/About/gradphoto.jpg" alt="Grad Photo" style="width: 32%; height: 250px; object-fit: cover; border-radius: 12px;" />
+  <img src="/Images/Mocap/20221118_132603.png" alt="Mocap" style="width: 32%; height: 250px; object-fit: cover; border-radius: 12px;" />
 </div>

@@ -17,10 +17,6 @@ draft: false
 I developed a VR demo for this project using Unreal Engine. This was initially created during my freelance work for a client. 
 The goal was to place the viewer on the edge of a mountaintop, showcasing the product in its intended environment.
 
-# Objectives
-
-
-
 
 # Development
 
@@ -29,11 +25,21 @@ In order to give due emphasis to the products being promoted, I have strategical
 rock formation. This arrangement is intended to mirror the way these products would be displayed in a retail environment,
 creating a sense of familiarity for potential customers.
 
+ <img src="/Images/Terrex/boots.png" alt="Computer" style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px;" />
+
 Additionally, I have ensured that these products are not just static displays. You have the ability to interact with them
 in a manner that closely simulates a real-life shopping experience. You can pick up the product, rotate it, and examine 
 it from different angles as much like you would in a brick-and-mortar store. Along with this, the retail price of each
 product is clearly displayed, providing all the necessary information right at your fingertips, and adding to the authenticity
 of the shopping experience.
+
+<div style="display: flex; gap: 10px; align-items: center; justify-content: center;">
+  <video src="/videos/Terrex/terrex1.mp4" autoplay muted loop playsinline style="width: 32%; border-radius: 12px;"></video>
+  <video src="/videos/Terrex/terrex2.mp4" autoplay muted loop playsinline style="width: 32%; border-radius: 12px;"></video>
+  <video src="/videos/Terrex/terrex3.mp4" autoplay muted loop playsinline style="width: 32%; border-radius: 12px;"></video>
+</div>
+
+
 
 # Environment
 
@@ -41,8 +47,23 @@ I used Unreal Engine's built-in landscaping tool to shape the environment and cr
 instill unease in the viewer when moving around, due to the visible steep mountain drop below them. By effectively 
 conveying the danger of falling, the viewer becomes more engaged with their surroundings, resulting in full immersion in the world.
 
+<div style="display: flex; gap: 10px; align-items: center; justify-content: center;">
+  <img src="/Images/Terrex/image(1).png" alt="Computer" style="width: 50%; height: 250px; object-fit: cover; border-radius: 12px;" />
+  <img src="/Images/Terrex/image(3).png" alt="Grad Photo" style="width: 50%; height: 250px; object-fit: cover; border-radius: 12px;" />
+</div>
+
 I also developed a multi-layered terrain material using landscape materials from the Megascans library. This technique 
 enabled me to enhance the landscape's detail by painting various surfaces with multiple materials simultaneously.
+
+<div style="display: flex; gap: 10px;">
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; flex: 1;">
+    <img src="/Images/Terrex/grid1.png" alt="Image 1" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px;" />
+    <img src="/Images/Terrex/grid2.png" alt="Image 2" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px;" />
+    <img src="/Images/Terrex/grid3.png" alt="Image 3" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px;" />
+    <img src="/Images/Terrex/grid4.png" alt="Image 4" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px;" />
+  </div>
+  <img src="/Images/Terrex/properties.png" alt="Image 5" style="flex: 1; object-fit: cover; border-radius: 12px;" />
+</div>
 
 To ensure that the viewers remain engrossed in the product's experience, I've strategically restricted the size of the 
 play area. This deliberate limitation not only keeps the focus firmly on the product but also prevents the viewers from 
