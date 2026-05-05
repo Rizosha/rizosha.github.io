@@ -3,7 +3,7 @@ title: Unreal Tutorial Dissertation
 published: 2023-04-20
 updated: 2023-04-20
 description: 'University Practical Dissertation - Introduction to Unreal Engine 5'
-image: '/videos/TutorialCLip.mp4'
+image: '/videos/TutorialClip.mp4'
 tags: []
 category: 'University'
 draft: false 
