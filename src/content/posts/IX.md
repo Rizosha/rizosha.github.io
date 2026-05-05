@@ -3,7 +3,7 @@ title: IX
 published: 2023-04-20
 updated: 2023-04-20
 description: 'IX is a coliseum action battler and was my final year group submission project at University.'
-image: '/videos/Attack1.mp4'
+image: '/Images/IX/FaceOffIX.png'
 tags: ['Featured']
 category: 'University'
 draft: false 

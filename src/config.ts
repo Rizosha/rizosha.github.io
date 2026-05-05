@@ -76,12 +76,17 @@ export const profileConfig: ProfileConfig = {
 	name: "Ashley James",
 	bio: "Unity C# Developer",
 	links: [
+	//	{
+	//		name: "Twitter",
+	//		icon: "fa6-brands:twitter", // Visit https://icones.js.org/ for icon codes
+	//		// You will need to install the corresponding icon set if it's not already included
+	//		// `pnpm add @iconify-json/<icon-set-name>`
+	//		url: "https://twitter.com",
+	//	},
 		{
-			name: "Twitter",
-			icon: "fa6-brands:twitter", // Visit https://icones.js.org/ for icon codes
-			// You will need to install the corresponding icon set if it's not already included
-			// `pnpm add @iconify-json/<icon-set-name>`
-			url: "https://twitter.com",
+			name: "LinkedIn",
+			icon: "fa6-brands:linkedin",
+			url: "https://www.linkedin.com/in/ashleyJames/",
 		},
 		{
 			name: "Steam",
@@ -93,6 +98,11 @@ export const profileConfig: ProfileConfig = {
 			icon: "fa6-brands:github",
 			url: "https://github.com/saicaca/fuwari",
 		},
+		{
+			name: "Itch.io",
+			icon: "fa6-brands:itch-io",
+			url: "https://rizosha.itch.io/",
+		}
 	],
 };
 
