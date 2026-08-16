@@ -20,7 +20,7 @@ draft: false
 
 ---
 
-# Introduction
+# Overview
 
 This game was my first group collaboration project that I worked on while at university. The premise for the game was an
 endless scrolling shooter, where a scientist was trying to end world hunger by creating superfoods. His experimentation 
@@ -31,17 +31,19 @@ how far I have come in my development journey.
 
 # Contribution List
 
-Movement,  
-Shooting mechanic,  
-Enemy Spawner,  
-Health Spawner,  
-Background Image scrolling,  
-Score System,  
-Scientist Sprite,  
-Rocks Sprite,  
-Enemy Animations.  
+- Movement  
+- Shooting mechanic  
+- Enemy Spawner  
+- Health Spawner  
+- Background Image scrolling  
+- Score System 
+- Scientist Sprite  
+- Rocks Sprite  
+- Enemy Animations  
 
 <br/>
+
+<!-- 
 
 # Development
 
@@ -135,3 +137,5 @@ void TransitionTo(Phase newPhase)
 
 For the background, I created a material for both the road and the city and added in the PNG images that were created by
 my team. I was then able to take the material and apply an offset as a moving Vector2, producing the scrolling effect. 
+
+-->
