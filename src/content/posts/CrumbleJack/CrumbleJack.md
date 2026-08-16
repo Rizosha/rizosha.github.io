@@ -18,6 +18,9 @@ draft: false
 
 <iframe frameborder="0" src="https://itch.io/embed-upload/14825707?color=b86f50" allowfullscreen="" width="900" height="585"><a href="https://rizosha.itch.io/crumblejack">Play CrumbleJack on itch.io</a></iframe>
 
+<br />
+
+
 # Overview
 
 This project was made for the Brackeys Game Jam 2025.2 in just 1 week. The theme for the game jam was "Risk it for a Biscuit" and we collectively came up with a blackjack style game that was based on biscuits.
@@ -25,11 +28,10 @@ This project was made for the Brackeys Game Jam 2025.2 in just 1 week. The theme
 
 # My Contributions
 
-Blackjack core gameplay loop
-Dealer system
-Dialogue system
-Jammie Animations 
-
+ - Blackjack core gameplay loop
+ - Dealer system
+ - Dialogue system
+ - Jammie Animations 
 
 
 
