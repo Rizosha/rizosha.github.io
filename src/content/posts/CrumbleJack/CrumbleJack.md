@@ -23,7 +23,7 @@ draft: false
 
 # Overview
 
-This project was made for the Brackeys Game Jam 2025.2 in just 1 week. The theme for the game jam was "Risk it for a Biscuit" and we collectively came up with a blackjack style game that was based on biscuits.
+This project was made for the Brackeys Game Jam 2025.2 in just 1 week. The theme for the game jam was "Risk it for a Biscuit" and we collectively came up with a blackjack style game with a biscuit theme. As you play through the game and earn money, you can buy power up biscuits that can be found in the biscuit tin shop. Place your bets against the dealer Jammie and try your luck or crumble away at the oppertunity! 
 
 
 # My Contributions
