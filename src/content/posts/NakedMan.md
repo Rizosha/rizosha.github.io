@@ -8,6 +8,10 @@ tags: ["Featured"]
 category: 'University'
 draft: false 
 ---
+
+
+<video src="/videos/NakedMan - Build(1).mp4" autoplay muted loop playsinline style="width: 100%;"></video>
+
 # Overview
 
 This project is a small rogue like prototype that I created for one my modules at university. Inspired by the game 
