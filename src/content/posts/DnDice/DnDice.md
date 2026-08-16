@@ -19,12 +19,15 @@ draft: false
   allowfullscreen>
 </iframe>
 
+<br />
+
 # Introduction
 
 This project was created as a submission for my Advanced Games Programming module at university. The goal was to develop a dice-rolling game that could be used while playing Dungeons and Dragons.
 
 Rather than building something purely for assessment, I wanted to create a tool I would genuinely use during my weekly DnD sessions. I also aimed to design it in a way that allowed me to continue developing and expanding it after the module submission date.
 
+<br />
 
 # Development
 
