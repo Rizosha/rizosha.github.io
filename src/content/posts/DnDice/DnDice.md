@@ -42,6 +42,20 @@ My initial approach used ground checks on each die face to determine which side 
 
 After revisiting this I landed on a more efficient solution using reference points. Each face has a reference point stored in an array, and by finding which has the highest Y value, I can determine the upward face. A script extracts these Y values into a second array, sorts them, and returns the correct result.
 
+```csharp
+// Store the Y values
+for (int i = 0; i < sides.Length; i++)
+{
+    sidesY[i] = sides[i].transform.position.y;
+    if( i == sides.Length)
+    {
+        i = 0;
+    }
+}
+//output the max value from the array
+topValueY = sidesY.Max();
+```
+
 
 ## Shooting Mechanic
 
@@ -49,7 +63,44 @@ For the shooting mechanic, the player touches the screen to gather all active di
 
 In Unity, a script stores references to each die, its Rigidbody, and the touch positions. It moves the dice to the touch point, calculates the launch direction from the distance between both points, and applies a slight camera offset so the grouped dice don't fill the screen.
 
+```csharp
+public void GatherDice()
+{
+    SetRandomInitialRotations();
+    //Loops through current dice and sets the position of dice at finger and
+
+    for (int i = 0; i < diceList.currentDiceList.Length; i++)
+    {
+        Rigidbody cDice = diceList.currentDiceList[i].GetComponent<Rigidbody>();
+        cDice.transform.position = wtouchEnd;
+
+        //This was its own method in fixed update at the end of touch, but it imitates what i want more here than
+        //what i created
+
+        // Adds a force to current dice in list
+        diceList.currentDiceList[i].AddForce(transform.TransformDirection(direction * 5f), ForceMode.Impulse);
+    }
+```
+
 Before firing, I added a shuffle mechanic to make rolls feel more natural. I initially used Unity's PingPong function to oscillate rotation values, then refined it to use random direction and force values instead — the physical shuffling added extra energy and gave the rolls more personality.
+
+```csharp
+   public void RotateObject()
+   {
+       pingPong2 = Mathf.Lerp(6f, -6f, Mathf.PingPong(Time.time / 4, 1));*/
+
+       for (int i = 0; i < diceList.currentDiceList.Length; i++)
+       {
+           //Sets the dice velocity to 0 so the dice doesn't gain momentum when held
+
+           diceList.currentDiceList[i].velocity = Vector3.zero;
+           diceList.currentDiceList[i].angularVelocity = Vector3.zero;
+
+           diceList.currentDiceList[i].AddTorque(transform.up * dRotSpd);
+       }
+
+   }
+```
 
 ## User Interface
 
@@ -69,7 +120,28 @@ I also added simple animations for opening and closing the dice case. This inclu
 
 I implemented a system that allows players to save custom dice sets for later use. This removes the need to repeatedly spawn the same combinations of dice.
 
-The system works by writing the dice array data to a JSON file along with a custom name. When saving a set, a new UI button is created using this name. Pressing the button instantly reloads the saved dice configuration.
+The system works by writing the dice array data to a JSON file along with a custom name. When saving a set, a new UI button is created using this name. Pressing the button instantly reloads the saved dice configuration. Below you can see the data that gets saved when creating a new button.
+
+```csharp
+public class SpellData
+    {
+        public string spellName;
+        public int d4, d6, d8, d10, d12, d20, d100;
+
+        public SpellData(string spellName, int d4, int d6, int d8, int d10, int d12, int d20, int d100)
+        {
+            this.spellName = spellName;
+            this.d4 = d4;
+            this.d6 = d6;
+            this.d8 = d8;
+            this.d10 = d10;
+            this.d12 = d12;
+            this.d20 = d20;
+            this.d100 = d100;
+        }
+    }
+```
+
 
 I designed the interface to support up to 20 saved dice sets, using scroll views to keep the layout clean and manageable.
 
