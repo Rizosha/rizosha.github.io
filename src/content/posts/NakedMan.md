@@ -103,7 +103,7 @@ line is the mouse direction
 I then set the character sprite and the player camera to be at a 45 degree angle along with setting the camera type to 
 Orthographic to create the illusion of the game being 2D.
 
-<img src="/Images/NakedMan/sideman.png" alt="Character mesh with collider gizmos" style="width: 100%; object-fit: contain; border-radius: 12px;" />
+<img src="/Images/NakedMan/sideman.png" alt="Character mesh with collider gizmos" style="width: 50%; object-fit: contain; border-radius: 12px;" />
 
 
 # Weapon
