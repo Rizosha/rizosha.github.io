@@ -92,11 +92,11 @@ line is the mouse direction
 
           if (angle >= 330)
           {
-              aDire
+              aDirection = 1;
           }
 
-          // sets tof rotation
-          animator.tion);
+          // sets the animator to the direction of rotation
+          animator.SetInteger("Rotation", aDirection);
       }
 ```
 
