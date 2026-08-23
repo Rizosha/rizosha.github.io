@@ -28,7 +28,9 @@ As I wanted to mimic the game Enter the Gungeon, I was particular with the angle
 towards. I separated the screen into different sectors which matched ETG that provided the 6 directions and created a
 script which would determine where the character was looking.
 
-<img src="/Images/NakedMan/degrees.png" alt="Direction angle diagram" style="width: 99%; object-fit: contain; border-radius: 12px;" />
+<div style="display: flex; justify-content: center;">
+  <img src="/Images/NakedMan/degrees.png" alt="Direction angle diagram" style="width: 75%; object-fit: contain; border-radius: 12px;" />
+</div>
 
 
 The script comprised of finding out where is true north (vector forward) and keeping track of the cursors vector location
