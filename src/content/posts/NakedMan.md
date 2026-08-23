@@ -37,12 +37,11 @@ in comparison with the character. I then created checks at each desired angle po
 controller to change the characters sprite. On the image below the purple debug line is true north and the green debug 
 line is the mouse direction
 
-<video src="/videos/NakedMan/360.mp4" autoplay muted loop playsinline style="width: 100%; border-radius: 12px;"></video>
-
-<img src="/Images/NakedMan/sidedude.png" alt="Character rotation debug view" style="width: 100%; object-fit: contain; border-radius: 12px;" />
-
-<img src="/Images/NakedMan/angleanim.png" alt="Animator state machine for directions" style="width: 100%; object-fit: contain; border-radius: 12px;" />
-
+<div style="display: flex; gap: 10px; align-items: center; justify-content: center;">
+  <video src="/videos/NakedMan/360.mp4" autoplay muted loop playsinline style="width: 32%; border-radius: 12px;"></video>
+  <img src="/Images/NakedMan/sidedude.png" alt="Character rotation debug view" style="width: 32%; object-fit: contain; border-radius: 12px;" />
+  <img src="/Images/NakedMan/angleanim.png" alt="Animator state machine for directions" style="width: 32%; object-fit: contain; border-radius: 12px;" />
+</div>
 
 ```csharp
           //sets true north
