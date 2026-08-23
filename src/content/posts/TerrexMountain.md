@@ -68,17 +68,28 @@ To ensure that the viewers remain engrossed in the product's experience, I've st
 play area. This deliberate limitation not only keeps the focus firmly on the product but also prevents the viewers from 
 wandering into unreachable areas, thereby maintaining the integrity of the virtual retail experience.
 
+<img src="/Images/Terrex/Ledge.png" alt="Ledge boundary debug view" style="width: 100%; height: 420px; object-fit: cover; border-radius: 12px;" />
+
 In addition to this, I utilized a snowstorm shader to portray the snow cascading down the mountainside. To further
 immerse the audience, I incorporated the sound of harsh winds, creating a more dynamic and atmospheric environment that 
 effectively sets the tone for the scene.
+
+<video src="/videos/Terrex/Shader.mp4" autoplay muted loop playsinline style="width: 100%; border-radius: 12px;"></video>
 
 To add a layer of interactivity to the scene and make it more engaging, I've incorporated several grabbable objects in
 the scene. These objects can be picked up and even thrown off the mountainside by the viewers. This simple, yet immersive
 feature, adds an element of fun and spontaneity to the experience, further enhancing the sense of realism and drawing the 
 viewers deeper into the virtual world I've created.
 
+<div style="display: flex; gap: 10px; align-items: center; justify-content: center;">
+  <video src="/videos/Terrex/vid8.mp4" autoplay muted loop playsinline style="width: 50%; border-radius: 12px;"></video>
+  <video src="/videos/Terrex/vid9.mp4" autoplay muted loop playsinline style="width: 50%; border-radius: 12px;"></video>
+</div>
+
 I also made use of the foliage features to decorate the landscape with plants and trees. By strategically placing various 
-types of trees, shrubs, and flowering plants, I created a vibrant and realistic environment
+types of trees, shrubs, and flowering plants, I created a vibrant and realistic environment.
+
+<video src="/videos/Terrex/vid10.mp4" autoplay muted loop playsinline style="width: 100%; border-radius: 12px;"></video>
 
 # Menu
 
@@ -93,6 +104,12 @@ Weather - This option toggles the snowy weather effect on and off. It can be use
 systems or if it's bothersome to some viewers.
 
 Quit - This option closes the application.
+
+
+<div style="display: flex; gap: 10px; align-items: center; justify-content: center;">
+  <img src="/Images/Terrex/terrex3.png" alt="Menu design" style="width: 50%; height: 250px; object-fit: cover; border-radius: 12px;" />
+  <img src="/Images/Terrex/menuclip.png" alt="Menu in-game" style="width: 50%; height: 250px; object-fit: cover; border-radius: 12px;" />
+</div>
 
 # Conclusion
 
