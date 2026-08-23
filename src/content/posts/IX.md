@@ -171,7 +171,7 @@ the guard will prompt the player to perform their attacks on another prisoner to
 To deliver the main narrative of the game and to guide the player, we also needed a dialogue system to communicate with 
 the player.
 
-<img src="/Images/IX/FaceOffIX.png alt="Animation layers in Unity Animator" />
+<img src="/Images/IX/FaceOffIX.png" alt="Animation layers in Unity Animator" />
 
 
 I created some UI elements which could hold the text and attached a custom dialogue script. This dialogue consisted of creating a dictionary to hold all of the possible conversations and filtered them into the UI box by generating and typing out the sentence at a given speed.
