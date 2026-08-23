@@ -2,12 +2,16 @@
 title: Naked Man
 published: 2021-09-01
 updated: 2021-09-01
-description: 'This Project was created for the Brackeys 2025.2 Game Jam with a theme of risk it for a biscuit.'
+description: 'This project was a University Submission for Gameplay Programming.'
 image: '/videos/NakedMan - Build(1).mp4'
 tags: ["Featured"]
 category: 'University'
 draft: false 
 ---
+
+
+<video src="/videos/NakedMan - Build(1).mp4" autoplay muted loop playsinline style="width: 100%;"></video>
+
 # Overview
 
 This project is a small rogue like prototype that I created for one my modules at university. Inspired by the game 

@@ -42,14 +42,16 @@ export const siteConfig: SiteConfig = {
 
 export const navBarConfig: NavBarConfig = {
 	links: [
-		LinkPreset.Home,
 		{
-			name: "Featured",
-			url: "/featured/",
+			name: "Featured Posts",
+			url: "/",
 		},
-		LinkPreset.Archive,
+		{
+			name: "All Posts",
+			url: "/all/",
+		},
 		LinkPreset.About,
-		
+
 	//	{
 	//		name: "GitHub",
 	//		url: "https://github.com/saicaca/fuwari",

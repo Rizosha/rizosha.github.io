@@ -1,4 +1,4 @@
-﻿---
+---
 import PostCard from "../components/PostCard.astro";
 import MainGridLayout from "../layouts/MainGridLayout.astro";
 import { getSortedPosts } from "../utils/content-utils";
@@ -11,7 +11,7 @@ let delay = 0;
 const interval = 50;
 ---
 
-<MainGridLayout title="Featured">
+<MainGridLayout>
     <div class="transition flex flex-col rounded-[var(--radius-large)] bg-[var(--card-bg)] py-1 md:py-0 md:bg-transparent md:gap-4 mb-4">
         {featuredPosts.map((entry) => (
                 <PostCard

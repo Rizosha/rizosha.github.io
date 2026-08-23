@@ -64,3 +64,7 @@ frameborder="0"
 encrypted-media"
 allowfullscreen>
 </iframe>
+
+# Overview
+
+This tutorial series was my dissertation project at University. While learning Unreal Engine 5 myself, I created a set of beginner videos guiding users through their first project using the Blueprints system tackling the questions I had when starting out. By the end, you'll have built a simple football shooting mechanic complete with goals and fireworks along with a deeper understanding of how to navigate through the editor. 

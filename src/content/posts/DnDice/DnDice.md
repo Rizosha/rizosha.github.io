@@ -10,14 +10,21 @@ draft: false
 ---
 
 <iframe
-width="720"
-height="405"
-src="https://www.youtube.com/embed/I5Bx0ryJFtM?autoplay=1"
-title="YouTube video player"
-frameborder="0"
-allow="autoplay; encrypted-media"
-allowfullscreen>
+  width="720"
+  height="405"
+  src="https://www.youtube.com/embed/I5Bx0ryJFtM?autoplay=1"
+  title="YouTube video player"
+  frameborder="0"
+  allow="autoplay; encrypted-media"
+  allowfullscreen>
 </iframe>
+
+
+---
+
+<br />
+
+<br />
 
 # Introduction
 
@@ -25,39 +32,24 @@ This project was created as a submission for my Advanced Games Programming modul
 
 Rather than building something purely for assessment, I wanted to create a tool I would genuinely use during my weekly DnD sessions. I also aimed to design it in a way that allowed me to continue developing and expanding it after the module submission date.
 
-# Objectives
-
-One of my main goals was to create a launcher system that gathers all selected dice into one place and fires them in a chosen direction. I wanted this launcher to feel explosive and chaotic, adding extra impact to dice rolls instead of behaving like more traditional dice rollers.
-
-Another key objective was a dice loadout system. Players should be able to save specific dice combinations, assign them a custom name, and instantly reuse them. This allows dice sets to be named after spells or attacks, removing the need to repeatedly curate the same dice.
-
-I also wanted a modifier system that could adjust dice results automatically. The user should be able to apply modifiers either per die or as a final total without needing to calculate anything at the table.
-
-Most existing dice rollers rely on simple button-press spawning. Instead, my aim was to create a system where dice spawn onto the board through a dedicated interaction and can then be physically launched.
-
-Finally, I needed a tally system that calculates the total of all dice, including modifiers. This also includes a secondary display that shows half of the current total, which is useful for large damage rolls.
+<br />
 
 # Development
 
 ## Dice Output
 
-My initial approach to calculating dice values involved using ground checks on each die. Once a die’s velocity reached zero, it would perform a ground check to determine which face was facing upward.
+My initial approach used ground checks on each die face to determine which side was facing up once the die stopped rolling — but a D20 would require 20 simultaneous checks, meaning five D20s alone would trigger 100 at once.
 
-While planning this, I quickly identified a major problem. A D20 would require 20 ground checks at once, meaning just five D20s would trigger 100 checks simultaneously. This would cause unnecessary performance issues, so I needed a better solution.
+After revisiting this I landed on a more efficient solution using reference points. Each face has a reference point stored in an array, and by finding which has the highest Y value, I can determine the upward face. A script extracts these Y values into a second array, sorts them, and returns the correct result.
 
-After discussing this with my tutor during class, we agreed that using reference points would be far more efficient. Each side of a die has a reference point, all of which are stored in an array. By checking which reference point has the highest Y value, I can determine which face is facing upward.
-
-To implement this, I created a script that stores the reference points for each side of the die. These points are added to an array, and their Y values are extracted into a second array. By sorting and comparing these values, I can identify the highest point and return the correct dice result efficiently.
 
 ## Shooting Mechanic
 
-For the shooting mechanic, I began by planning the interaction visually. When the player touches the screen, all active dice gather at the touch point. Dragging the finger away creates a slingshot between the start and end points. When released, all dice are fired in that direction.
+For the shooting mechanic, the player touches the screen to gather all active dice at that point, then drags to create a slingshot effect — releasing fires the dice in that direction.
 
-In Unity, I implemented this by creating a script that stores references to each die, its Rigidbody, and the touch input positions. A function moves the dice to the touch point and calculates the launch direction based on the distance between the two points. I also added an offset so the dice sit slightly below the camera, as they initially took up too much screen space when grouped together.
+In Unity, a script stores references to each die, its Rigidbody, and the touch positions. It moves the dice to the touch point, calculates the launch direction from the distance between both points, and applies a slight camera offset so the grouped dice don't fill the screen.
 
-Before firing the dice, I wanted a way to shuffle them so the rolls felt more natural. I first experimented with Unity’s PingPong function to simulate left, right, up, and down motion by oscillating between rotation values. Although this was not the most efficient solution, it worked well as a learning exercise.
-
-Later, I refined the system to use random values for both direction and force. A simpler option would have been to randomise rotation directly, but the physical shuffling added extra energy to the mechanic and gave the rolls more personality.
+Before firing, I added a shuffle mechanic to make rolls feel more natural. I initially used Unity's PingPong function to oscillate rotation values, then refined it to use random direction and force values instead — the physical shuffling added extra energy and gave the rolls more personality.
 
 ## User Interface
 
