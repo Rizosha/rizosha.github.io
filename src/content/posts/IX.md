@@ -93,15 +93,15 @@ The player has several attacks at their disposal, ranging from a basic attack co
 
 Using animation layers within the animator allowed me to switch between different animation states such as attacking, being damaged and dodging.
 
-<img src="/public/Images/IX/Layers.png" alt="Animation layers in Unity Animator" />
+<img src="/Images/IX/Layers.png" alt="Animation layers in Unity Animator" />
 
 In order to create the combo attacks, I made use of the events tab in the animation window to create a small window that
 listens to see if the player has pressed either the normal or heavy attack button. This would then blend the basic attack
 into the next animation by using the inbuilt animation blend feature.
 
 <div style="display: flex; gap: 10px; align-items: center; justify-content: center;">
-<img src="/public/Images/IX/Events.avif" style="width: 48%; border-radius: 12px;" alt="Animation events tab" />
-<img src="/public/Images/IX/ExitTime.avif" style="width: 48%; border-radius: 12px;" alt="Exit time settings" />
+<img src="/Images/IX/Events.avif" style="width: 48%; border-radius: 12px;" alt="Animation events tab" />
+<img src="/Images/IX/ExitTime.avif" style="width: 48%; border-radius: 12px;" alt="Exit time settings" />
 </div>
 
 Certain conditions were established to assess the player's ability to execute the attack. This involved verifying whether
@@ -123,7 +123,7 @@ to have a speed boost during rolling to cover more distance, making the dodge mo
 
   <div style="display: flex; gap: 10px; align-items: center;">
       <img 
-        src="/public/Images/IX/Iframe.png" 
+        src="/Images/IX/Iframe.png" 
         alt="Iframe Screenshot" 
         style="width: 49%; border-radius: 12px;" 
       />
@@ -147,27 +147,89 @@ The player will start by being woken up in their cell by a guard which welcomes 
 player will learn how to exit their cell and gather their equipment by walking to one of the weapons stands. After this,
 the guard will prompt the player to perform their attacks on another prisoner to advance the tutorial.
 
-To teach the player how to play our game, I implemented a tutorial at the start for the player to complete. Throughout 
-this tutorial, the player would learn all the basics of player movement and combat, along with delivering the main story
-narrative of our game.
 
-The player will start by being woken up in their cell by a guard which welcomes them to the trials of IX. From here the 
-player will learn how to exit their cell and gather their equipment by walking to one of the weapons stands. After this,
-the guard will prompt the player to perform their attacks on another prisoner to advance the tutorial.
+<div style="display: flex; gap: 10px; align-items: center; justify-content: center;">
+  <video
+    src="/videos/Start.mp4"
+    autoplay muted loop playsinline
+    style="width: 32%; border-radius: 12px;">
+  </video>
+  <video
+    src="/videos/GearUp.mp4"
+    autoplay muted loop playsinline
+    style="width: 32%; border-radius: 12px;">
+  </video>
+  <video
+    src="/videos/AttackDummy.mp4"
+    autoplay muted loop playsinline
+    style="width: 32%; border-radius: 12px;">
+  </video>
+</div>
+
+
 
 To deliver the main narrative of the game and to guide the player, we also needed a dialogue system to communicate with 
 the player.
 
-I created some UI elements which could hold the text and attached a custom dialogue script. This dialogue consisted of 
-creating a dictionary to hold all of the possible conversations and filtered them into the UI box by generating and 
-typing out the sentence at a given speed.
+<img src="/Images/IX/FaceOffIX.png alt="Animation layers in Unity Animator" />
+
+
+I created some UI elements which could hold the text and attached a custom dialogue script. This dialogue consisted of creating a dictionary to hold all of the possible conversations and filtered them into the UI box by generating and typing out the sentence at a given speed.
+
+<div style="display: flex; gap: 10px; align-items: center;">
+  <img
+    src="/Images/IX/dialoguescript.png"
+    alt="Dialogue script"
+    style="width: 49%; border-radius: 12px;"
+  />
+  <video
+    src="/videos/tutswing.mp4"
+    autoplay
+    muted
+    loop
+    playsinline
+    style="width: 49%; border-radius: 12px;">
+  </video>
+</div>
+
 
 I also added in checks to see if the player had communicated with the NPC. This allowed the player to see if they needed
 to talk to a NPC by displaying the IX logo above their head. A red marker would indicate the main tutorial to complete, 
 while the yellow marker would show NPC's that would provide lore to the player.
 
+<div style="display: flex; gap: 10px; align-items: center; justify-content: center;">
+  <img
+    src="/Images/IX/YellowX.png"
+    alt="Yellow marker"
+    style="width: 40%; border-radius: 12px;"
+  />
+  <img
+    src="/Images/IX/redX.png"
+    alt="Red marker"
+    style="width: 40%; border-radius: 12px;"
+  />
+</div>
+
 The NPC’s also have different states that they can be in, such as Idle, Walk and Talking. When communicating with the 
 player, the NPC will also rotate to face where the player is standing.
+
+<div style="display: flex; gap: 10px; align-items: center; justify-content: center;">
+  <video
+    src="/videos/idle.mp4"
+    autoplay muted loop playsinline
+    style="width: 32%; border-radius: 12px;">
+  </video>
+  <video
+    src="/videos/walk.mp4"
+    autoplay muted loop playsinline
+    style="width: 32%; border-radius: 12px;">
+  </video>
+  <video
+    src="/videos/talk.mp4"
+    autoplay muted loop playsinline
+    style="width: 32%; border-radius: 12px;">
+  </video>
+</div>
 
 When the tutorial has been completed, the gate to the next stage of the arena will open using a custom animation. To 
 prevent the player from replaying this tutorial when entering this area again, a JSON file will be created when the 
@@ -180,16 +242,61 @@ image of a flame and applying noise to it with the Voronoi node in the shader gr
 that controlled the fires DissolvePower, DissolveScale and DissolveSpeed I was able to multiply them together to create 
 the fire effect.
 
+<div style="display: flex; gap: 10px; align-items: center; justify-content: center;">
+  <video
+    src="/videos/fire1.mp4"
+    autoplay muted loop playsinline
+    style="width: 49%; border-radius: 12px;">
+  </video>
+  <video
+    src="/videos/fire2.mp4"
+    autoplay muted loop playsinline
+    style="width: 49%; border-radius: 12px;">
+  </video>
+</div>
+
 To create the death effect, I created a shader that takes a texture from the player and then transitions it to a stone 
 texture. This then has a dissolve effect applied over it using the noise, step and multiply nodes within the visual scripter.
 I then manipulated it with code by using a co routine and a refresh rate variable to gradually swap between the player 
 and stone textures which would cycle through all the listed materials. I then added the previous fire shader with a 
 different colour to add more flare to the transition.
 
+<div style="display: flex; gap: 10px; align-items: center;">
+  <video
+    src="/videos/deathanim.mp4"
+    autoplay
+    muted
+    loop
+    playsinline
+    style="width: 49%; border-radius: 12px;">
+  </video>
+  <img
+    src="/Images/IX/animcode.png"
+    alt="Death animation inspector setup"
+    style="width: 49%; border-radius: 12px;"
+  />
+</div>
+
 I was able to add in a wobble on the X and Y axis and feed it into the fill of the bottle. Along with this I was able to
 add in a colour node to get it to resemble a health potion. After this, I attached a script to the potion which would 
 interact with the nodes on the shader and the material. The script is able to take the X and Y rotation of the of the 
 last location of the fluids fill amount along with adding a clamp to the velocity.
+
+<div style="display: flex; gap: 10px; align-items: center;">
+  <video
+    src="/videos/FluidBottle.mp4"
+    autoplay
+    muted
+    loop
+    playsinline
+    style="width: 49%; border-radius: 12px;">
+  </video>
+  <img
+    src="/Images/IX/shadergraph.png"
+    alt="Shader graph"
+    style="width: 49%; border-radius: 12px;"
+  />
+</div>
 
 ## Testing
 
@@ -197,6 +304,19 @@ Throughout the year, we further Developed the game by doing rigorous Testing ses
 either displaying the game for our class, or to the whole university by having it displayed in the front entrance of the
 university. Throughout these sessions, we would gain feedback by getting the participants to fill out a curated 
 questionnaire which we would revise and work into further development of our game.
+
+<div style="display: flex; gap: 10px; align-items: center; justify-content: center;">
+  <img
+    src="/Images/IX/testing1.jpg"
+    alt="Playtesting session"
+    style="width: 49%; border-radius: 12px;"
+  />
+  <img
+    src="/Images/IX/testing2.jpg"
+    alt="Playtesting session"
+    style="width: 49%; border-radius: 12px;"
+  />
+</div>
 
 # Motion Capture
 
@@ -206,13 +326,53 @@ some time with the motion capture department with our University.
 This was an amazing opportunity to learn about motion capture and was a worthwhile experience to learn about the process
 of recording animations and fully implementing them into the game.
 
+<div style="display: flex; justify-content: center;">
+  <img
+    src="/Images/IX/mocap.png"
+    alt="Animation layers in Unity Animator"
+    style="max-width: 60%; border-radius: 12px;"
+  />
+</div>
+
+
 Even though we weren't able to use all the recorded animations from that day, the ones we did use proved to be useful
 and turned out amazing.
+
+<div style="display: flex; gap: 10px; align-items: center; justify-content: center;">
+  <video
+    src="/videos/Dance.mp4"
+    autoplay muted loop playsinline
+    style="width: 49%; border-radius: 12px;">
+  </video>
+  <video
+    src="/videos/dance2.mp4"
+    autoplay muted loop playsinline
+    style="width: 49%; border-radius: 12px;">
+  </video>
+</div>
 
 # Marketing
 
 Another major component to the course was to create marketing materials for our game. Using some of our in game assets 
 and logo we were able to create some amazing T-shirts, custom stickers and even a game poster to help promote our game.
+
+<div style="display: flex; gap: 10px; align-items: center; justify-content: center;">
+  <img
+    src="/Images/IX/tshirt.jpg"
+    alt="IX t-shirt merch"
+    style="width: 32%; border-radius: 12px;"
+  />
+  <img
+    src="/Images/IX/poster.png"
+    alt="IX poster"
+    style="width: 32%; border-radius: 12px;"
+  />
+  <img
+    src="/Images/IX/stickers.jpg"
+    alt="IX stickers"
+    style="width: 32%; border-radius: 12px;"
+  />
+</div>
 
 # Outcome
 
