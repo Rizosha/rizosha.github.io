@@ -123,10 +123,15 @@ prevent the player from firing for 1.4 seconds.
 Using Aseprite and some online images, I was able to create some textures for the level. These were made so they are 
 repeatable and can be used for the walls and floor.
 
-<img src="/Images/NakedMan/Floortile-Recovered.png" alt="Floor tile texture" style="width: 100%; object-fit: contain; border-radius: 12px;" />
+<div style="display: flex; gap: 10px; align-items: center; justify-content: center;">
+  <img src="/Images/NakedMan/Floortile-Recovered.png" alt="Floor tile texture" style="width: 50%; object-fit: contain; border-radius: 12px;" />
+  <img src="/Images/NakedMan/Screenshot 2022-01-08 232735.png" alt="Wall tile texture" style="width: 50%; object-fit: contain; border-radius: 12px;" />
+</div>
 
-<img src="/Images/NakedMan/Screenshot 2022-01-08 232735.png" alt="Wall tile texture" style="width: 100%; object-fit: contain; border-radius: 12px;" />
-
+<div style="display: flex; gap: 10px; align-items: center; justify-content: center;">
+  <video src="/videos/NakedMan/health.mp4" autoplay muted loop playsinline style="width: 50%; border-radius: 12px;"></video>
+  <video src="/videos/NakedMan/health2d.mp4" autoplay muted loop playsinline style="width: 50%; border-radius: 12px;"></video>
+</div>
 
 I also created some pitfalls that the player can fall through by creating gaps in the floor. The way this works is that
 the players last position is stored in a variable and is updated once per second if the character is grounded. If the 
