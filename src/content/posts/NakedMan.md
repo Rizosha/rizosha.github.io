@@ -113,10 +113,10 @@ to world space and saving it, creating a direction to the aim location. If the p
 projectile will fire toward the direction saved. When the ammo runs out, the weapon will automatically reload and
 prevent the player from firing for 1.4 seconds.
 
-<video src="/videos/NakedMan/aim.mp4" autoplay muted loop playsinline style="width: 100%; border-radius: 12px;"></video>
-
-<img src="/Images/NakedMan/ammo.png" alt="Ammo UI bar" style="width: 100%; object-fit: contain; border-radius: 12px;" />
-
+<div style="display: flex; gap: 10px; align-items: center; justify-content: center;">
+  <video src="/videos/NakedMan/aim.mp4" autoplay muted loop playsinline style="width: 50%; border-radius: 12px;"></video>
+  <img src="/Images/NakedMan/ammo.png" alt="Ammo UI bar" style="width: 50%; object-fit: contain; border-radius: 12px;" />
+</div>
 
 # Map Features
 
