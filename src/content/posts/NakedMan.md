@@ -19,9 +19,17 @@ Enter the Gungeon, my aim was to create a 2D level in a 3D space with enemy AI r
 
 # Character Controller
 
+When creating the controller, I created a basic 2d character sprite in Aseprite with 6 different direction angles for the character to look towards based on the position of your cursor on the screen.
+
+<img src="/Images/NakedMan/nakedmanEdit-Sheet-Recovered.png" alt="Character sprite sheet" style="width: 100%; object-fit: contain; border-radius: 12px;" />
+
+
 As I wanted to mimic the game Enter the Gungeon, I was particular with the angles/directions the character could look
 towards. I separated the screen into different sectors which matched ETG that provided the 6 directions and created a
 script which would determine where the character was looking.
+
+<img src="/Images/NakedMan/degrees.png" alt="Direction angle diagram" style="width: 99%; object-fit: contain; border-radius: 12px;" />
+
 
 The script comprised of finding out where is true north (vector forward) and keeping track of the cursors vector location
 by using a cube fixed to its own layer and storing its location. From this I can figure out what angle the cursor it at 
@@ -29,8 +37,75 @@ in comparison with the character. I then created checks at each desired angle po
 controller to change the characters sprite. On the image below the purple debug line is true north and the green debug 
 line is the mouse direction
 
+<video src="/videos/NakedMan/360.mp4" autoplay muted loop playsinline style="width: 100%; border-radius: 12px;"></video>
+
+<img src="/Images/NakedMan/sidedude.png" alt="Character rotation debug view" style="width: 100%; object-fit: contain; border-radius: 12px;" />
+
+<img src="/Images/NakedMan/angleanim.png" alt="Animator state machine for directions" style="width: 100%; object-fit: contain; border-radius: 12px;" />
+
+
+```csharp
+          //sets true north
+          Vector3 north = Quaternion.Euler(-45f, 0, 0) * player.forward;
+          //direction of mouse
+          Vector3 direction = mouse.position - transform.position;
+          //creates a reference from true north
+          Vector3 cross = Vector3.Cross(north, direction);
+
+          //calculates angle of north and mouse direction
+          angle = Vector3.Angle(direction, north);
+
+          if (cross.y < 0)
+          {
+              //makes the angle 360
+              angle = (180 - angle) + 180;
+          }
+
+          //Big IF statement which sets the angles for the animator.
+          if (angle >= 0 && angle <= 30)
+          {
+              aDirection = 1;
+          }
+          if (angle >= 30 && angle <= 60 )
+          {
+              aDirection = 2;
+          }
+          if (angle >= 60 && angle <= 150)
+          {
+              aDirection = 3;
+          }
+          if (angle >= 150 && angle <= 180)
+          {
+              aDirection = 4;
+          }
+          if (angle >= 180 && angle <= 210)
+          {
+              aDirection = 4;
+          }
+          if (angle >= 210 && angle <= 300)
+          {
+              aDirection = 5;
+          }
+          if (angle >= 300 && angle <= 330)
+          {
+              aDirection = 6;
+          }
+
+          if (angle >= 330)
+          {
+              aDire
+          }
+
+          // sets tof rotation
+          animator.tion);
+      }
+```
+
 I then set the character sprite and the player camera to be at a 45 degree angle along with setting the camera type to 
 Orthographic to create the illusion of the game being 2D.
+
+<img src="/Images/NakedMan/sideman.png" alt="Character mesh with collider gizmos" style="width: 100%; object-fit: contain; border-radius: 12px;" />
+
 
 # Weapon
 
@@ -38,6 +113,11 @@ The player also has a weapon that can be aimed with the mouse. This works by tak
 to world space and saving it, creating a direction to the aim location. If the player clicks the fire button, a 
 projectile will fire toward the direction saved. When the ammo runs out, the weapon will automatically reload and
 prevent the player from firing for 1.4 seconds.
+
+<video src="/videos/NakedMan/aim.mp4" autoplay muted loop playsinline style="width: 100%; border-radius: 12px;"></video>
+
+<img src="/Images/NakedMan/ammo.png" alt="Ammo UI bar" style="width: 100%; object-fit: contain; border-radius: 12px;" />
+
 
 # Map Features
 
