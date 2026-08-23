@@ -103,7 +103,9 @@ line is the mouse direction
 I then set the character sprite and the player camera to be at a 45 degree angle along with setting the camera type to 
 Orthographic to create the illusion of the game being 2D.
 
-<img src="/Images/NakedMan/sideman.png" alt="Character mesh with collider gizmos" style="width: 50%; object-fit: contain; border-radius: 12px;" />
+<div style="display: flex; justify-content: center;">
+  <img src="/Images/NakedMan/sideman.png" alt="Character mesh with collider gizmos" style="width: 50%; object-fit: contain; border-radius: 12px;" />
+</div>
 
 
 # Weapon
@@ -128,16 +130,16 @@ repeatable and can be used for the walls and floor.
   <img src="/Images/NakedMan/Screenshot 2022-01-08 232735.png" alt="Wall tile texture" style="width: 50%; object-fit: contain; border-radius: 12px;" />
 </div>
 
-<div style="display: flex; gap: 10px; align-items: center; justify-content: center;">
-  <video src="/videos/NakedMan/health.mp4" autoplay muted loop playsinline style="width: 50%; border-radius: 12px;"></video>
-  <video src="/videos/NakedMan/health2d.mp4" autoplay muted loop playsinline style="width: 50%; border-radius: 12px;"></video>
-</div>
+
 
 I also created some pitfalls that the player can fall through by creating gaps in the floor. The way this works is that
 the players last position is stored in a variable and is updated once per second if the character is grounded. If the 
 character isn't grounded at the specified time, the player will return to the last position saved.
 
-<video src="/videos/NakedMan/pitfall.mp4" autoplay muted loop playsinline style="width: 100%; border-radius: 12px;"></video>
+
+<div style="display: flex; justify-content: center;">
+  <video src="/videos/NakedMan/pitfall.mp4" autoplay muted loop playsinline style="width: 50%; border-radius: 12px;"></video>
+</div>
 
 Placed around the map are some health packs that the player can collect. I created a 3d box that resembles a med kit and
 attached a script. The script checks to see if the player has entered the required radius around the pickup and checks 
@@ -145,9 +147,10 @@ to see if the player has pressed the required key to pick it up. The amount of h
 doesn't give the player more health than the maximum. I also added some coloured spotlights to highlight med packs and a
 script to make it rotate around at a given speed.
 
-<video src="/videos/NakedMan/health.mp4" autoplay muted loop playsinline style="width: 100%; border-radius: 12px;"></video>
-
-<video src="/videos/NakedMan/health2d.mp4" autoplay muted loop playsinline style="width: 100%; border-radius: 12px;"></video>
+<div style="display: flex; gap: 10px; align-items: center; justify-content: center;">
+  <video src="/videos/NakedMan/health.mp4" autoplay muted loop playsinline style="width: 50%; border-radius: 12px;"></video>
+  <video src="/videos/NakedMan/health2d.mp4" autoplay muted loop playsinline style="width: 50%; border-radius: 12px;"></video>
+</div>
 
 
 # Enemy AI
