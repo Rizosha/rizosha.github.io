@@ -40,6 +40,15 @@ would then be further developed throughout the year.
 
 # Contribution List
 
+- Character Controller
+- Animation Implementation
+- Tutorial and Dialogue systems
+- NPC's
+- Motion Capture
+- Interractions
+- Save Progress
+- Shader Work
+
 
 <br/>
 
@@ -107,6 +116,7 @@ into the next animation by using the inbuilt animation blend feature.
 Certain conditions were established to assess the player's ability to execute the attack. This involved verifying whether
 the player possessed sufficient stamina to initiate the attack or if the player had undergone an attack, transitioning 
 them from the attacking animation to a damaged state.
+
 
 I was also able to utilize a blocking animation by using an animation mask for the player. This allowed me to blend the 
 blocking animation over the top of movement animations, allowing the player to move while blocking. Using code, I 
