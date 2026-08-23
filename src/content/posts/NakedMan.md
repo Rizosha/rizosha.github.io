@@ -164,27 +164,49 @@ In the Patrol state, I created co ordinates that the enemy can randomly choose b
 using a NavMesh. When the enemy has reached its target destination, it will create the shortest path from its current 
 position to the new selected destination and travel along it while looking out for the player.
 
+<div style="display: flex; justify-content: center;">
+  <video src="/videos/NakedMan/patrol.mp4" autoplay muted loop playsinline style="width: 50%; border-radius: 12px;"></video>
+</div>
+
 # Chase State
 
 For the Chase state, if the player moves into a specified radius near the enemy, the direction of the enemies movement 
 will change to the players last known location and track him down and follow him at a set distance. If the Player leaves
 this radius, the enemy will stop chasing the Player and return back to patrolling the level.
 
+<div style="display: flex; justify-content: center;">
+  <video src="/videos/NakedMan/Chase.mp4" autoplay muted loop playsinline style="width: 50%; border-radius: 12px;"></video>
+</div>
+
 # Attack State
 
 In the attack state, the enemy will now try to aim and shoot at the player. If the player is hit by any of the enemy
 projectiles, the player will take set damage.
+
+<div style="display: flex; justify-content: center;">
+  <video src="/videos/NakedMan/Attack.mp4" autoplay muted loop playsinline style="width: 50%; border-radius: 12px;"></video>
+</div>
 
 # Berserk State
 
 In the case of the cube enemy, I added an extra berserk state to add some variety to the enemies by increasing their
 rate of fire and attack range. This will trigger once the enemy is taken to less than half health.
 
+<div style="display: flex; justify-content: center;">
+  <video src="/videos/NakedMan/Beserk.mp4" autoplay muted loop playsinline style="width: 50%; border-radius: 12px;"></video>
+</div>
+
 # Win Condition
 
 Once all of the enemies have been defeated, this will trigger the win condition by spawning a key pickup at the end of 
 the level. Once the player picks this up by walking over and pressing the interact button, the player can now open the 
 sealed door and complete the stage.
+
+<div style="display: flex; gap: 10px; align-items: center; justify-content: center;">
+  <video src="/videos/NakedMan/Key.mp4" autoplay muted loop playsinline style="width: 32%; border-radius: 12px;"></video>
+  <img src="/Images/NakedMan/open.png" alt="Door opening" style="width: 32%; object-fit: contain; border-radius: 12px;" />
+  <img src="/Images/NakedMan/Win.png" alt="Win screen" style="width: 32%; object-fit: contain; border-radius: 12px;" />
+</div>
 
 # Outcome
 
