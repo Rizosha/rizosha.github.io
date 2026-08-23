@@ -24,8 +24,6 @@ draft: false
 
 <br />
 
-<br />
-
 # Introduction
 
 This project was created as a submission for my Advanced Games Programming module at university. The goal was to develop a dice-rolling game that could be used while playing Dungeons and Dragons.
