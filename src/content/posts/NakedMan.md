@@ -158,7 +158,7 @@ script to make it rotate around at a given speed.
 For the enemy AI, I created a script that would contain the logic and behaviour for patrolling across the map and 
 targeting the player. To achieve this, I created a state machine that would have 3 states, Patrol, Chase and Attack.
 
-# Patrol State
+## Patrol State
 
 In the Patrol state, I created co ordinates that the enemy can randomly choose between, allowing them to move around 
 using a NavMesh. When the enemy has reached its target destination, it will create the shortest path from its current 
@@ -168,7 +168,7 @@ position to the new selected destination and travel along it while looking out f
   <video src="/videos/NakedMan/patrol.mp4" autoplay muted loop playsinline style="width: 50%; border-radius: 12px;"></video>
 </div>
 
-# Chase State
+## Chase State
 
 For the Chase state, if the player moves into a specified radius near the enemy, the direction of the enemies movement 
 will change to the players last known location and track him down and follow him at a set distance. If the Player leaves
@@ -178,7 +178,7 @@ this radius, the enemy will stop chasing the Player and return back to patrollin
   <video src="/videos/NakedMan/Chase.mp4" autoplay muted loop playsinline style="width: 50%; border-radius: 12px;"></video>
 </div>
 
-# Attack State
+## Attack State
 
 In the attack state, the enemy will now try to aim and shoot at the player. If the player is hit by any of the enemy
 projectiles, the player will take set damage.
@@ -187,7 +187,7 @@ projectiles, the player will take set damage.
   <video src="/videos/NakedMan/Attack.mp4" autoplay muted loop playsinline style="width: 50%; border-radius: 12px;"></video>
 </div>
 
-# Berserk State
+## Berserk State
 
 In the case of the cube enemy, I added an extra berserk state to add some variety to the enemies by increasing their
 rate of fire and attack range. This will trigger once the enemy is taken to less than half health.
