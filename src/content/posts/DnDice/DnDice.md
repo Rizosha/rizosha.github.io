@@ -74,12 +74,37 @@ public void GatherDice()
         Rigidbody cDice = diceList.currentDiceList[i].GetComponent<Rigidbody>();
         cDice.transform.position = wtouchEnd;
 
-        //This was its own method in fixed update at the end of touch, but it imitates what i want more here than
-        //what i created
-
         // Adds a force to current dice in list
         diceList.currentDiceList[i].AddForce(transform.TransformDirection(direction * 5f), ForceMode.Impulse);
     }
+```
+
+```csharp
+   void GetInputDirections()
+   {
+       //Sling is the slingshot mechanic
+       touchSling = Input.GetTouch(0);
+
+       //Create touch reference positions on touch events
+       if (touchSling.phase == TouchPhase.Began )
+       {
+           touchStart = touchSling.position;
+           touchEnd = touchSling.position;
+
+       }else if (touchSling.phase == TouchPhase.Moved || touchSling.phase == TouchPhase.Ended)
+       {
+           touchEnd = touchSling.position;
+       }
+
+       //Converts touch points into world points
+       wtouchStart = Camera.main.ScreenToWorldPoint(new Vector3(touchStart.x,touchStart.y,cameraDist));
+       wtouchEnd = Camera.main.ScreenToWorldPoint(new Vector3(touchEnd.x,touchEnd.y,cameraDist));
+
+
+       //Using the given points, create a direction to fire object
+       direction = wtouchStart - wtouchEnd;
+
+   }
 ```
 
 Before firing, I added a shuffle mechanic to make rolls feel more natural. I initially used Unity's PingPong function to oscillate rotation values, then refined it to use random direction and force values instead — the physical shuffling added extra energy and gave the rolls more personality.
@@ -98,7 +123,6 @@ Before firing, I added a shuffle mechanic to make rolls feel more natural. I ini
 
            diceList.currentDiceList[i].AddTorque(transform.up * dRotSpd);
        }
-
    }
 ```
 
@@ -106,7 +130,64 @@ Before firing, I added a shuffle mechanic to make rolls feel more natural. I ini
 
 I created a results display that activates once all dice velocities reach zero. This shows the total value of the roll and includes a secondary calculator that automatically displays half of the total for convenience.
 
+```csharp
+    // shows the velocity of the dice in editor
+        diceVel = gameObject.GetComponent<Rigidbody>().velocity.magnitude;
+
+        // if the dice velocity is 0, output the dice number
+        if (canDisplay && diceVel == 0)
+        {
+            DiceUpdate();
+            hasStopped = true;
+            canDisplay = false;
+        }
+        else
+        {
+            diceOutput = 0;
+            hasStopped = false;
+        }
+```
+```csharp
+   private void DiceUpdate()
+    {
+        // the int modifier
+        modifier = mod.modifier;
+        //toggle bool
+        allMod = modAll.all;
+
+        // Store the Y values
+        for (int i = 0; i < sides.Length; i++)
+        {
+            sidesY[i] = sides[i].transform.position.y;
+            if( i == sides.Length)
+            {
+                i = 0;
+            }
+        }
+        //output the max value from the array
+        topValueY = sidesY.Max();
+}
+```
+
 A modifier button was added to the dice case, allowing players to apply bonuses or penalties either to each die or as a final value. This makes it quick and easy to account for buffs, debuffs, or situational modifiers during gameplay.
+
+```csharp
+ //adds a modifier to the dice output if selected
+        if (allMod)
+        {
+            diceOutput = sidesY.ToList().IndexOf(topValueY) + 1 + modifier;
+        }
+        else
+        {
+            diceOutput = sidesY.ToList().IndexOf(topValueY) + 1;
+        }
+
+        //times output by 10 to achieve a D100
+        if (gameObject.CompareTag("D100"))
+        {
+            diceOutput = diceOutput * 10;
+        }
+```
 
 ## Dice Spawning
 
