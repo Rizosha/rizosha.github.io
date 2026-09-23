@@ -19,6 +19,7 @@ draft: false
   allowfullscreen>
 </iframe>
 
+<iframe frameborder="0" src="https://itch.io/embed-upload/19366665?color=333333" allowfullscreen="" width="640" height="380"><a href="https://rizosha.itch.io/dndice">Play DnDice on itch.io</a></iframe>
 
 ---
 
