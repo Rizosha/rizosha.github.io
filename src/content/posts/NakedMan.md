@@ -4,7 +4,7 @@ published: 2021-09-01
 updated: 2021-09-01
 description: 'This project was a University Submission for Gameplay Programming.'
 image: '/videos/NakedMan - Build(1).mp4'
-tags: ["Featured"]
+tags: []
 category: 'University'
 draft: false 
 ---
